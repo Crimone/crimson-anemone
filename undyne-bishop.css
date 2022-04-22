@@ -63,6 +63,7 @@
 
 /* 选填选项，不填写时不显示，替代上文选项  */
 .excerpts-wrap .excerpts-author[style*="{$"],
+.excerpts-wrap .excerpts-chapter[style*="{$"],
 .excerpts-wrap .excerpts-tags[style*="{$"],
 .excerpts-wrap .excerpts-trans[style*="{$"]{
     display:none;
