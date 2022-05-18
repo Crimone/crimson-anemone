@@ -27,7 +27,7 @@
     --textColor: var(--secondOneiroiColor);
     --headerColor: var(--navyGreenColor);
     --selectionColor: var(--babyBlueColor);
-    --header-font: "Berkshire Swash", cursive;
+    --header-font: "Berkshire Swash",'Ma Shan Zheng', cursive;
     --body-font: "Atkinson Hyperlegible", sans-serif;
     --mono-font: "Anonymous Pro", monospace;
     --link-timing: 0.125s ease-out;
