@@ -3,9 +3,6 @@
 * Background and header texture's based off of webtreats: https://www.flickr.com/photos/44071822@N08/5436446554 and edited by LAN 2D, released under CC BY 2.0
 * The Dreaming Eye logo based off of OpenMandriva Association: https://commons.wikimedia.org/wiki/File:Oma-logo-22042013_300pp.png and edited by LAN 2D, under CC BY-SA 3.0
 * Fonts used are  */
-
-@import url("https://wanderers-library.wikidot.com/component:theme/code/1");
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
 
 :root {
@@ -242,4 +239,3 @@ a, a.newpage {
         background-image: url(http://wanderers-sandbox.wikidot.com/local--files/lan-2d/greyglow3.png);
         opacity: 0.7;
     }
-
