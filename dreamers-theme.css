@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Dreamers' Library Theme by LAN 2D in 2022
 *    Based on Dust Jacket by Woedenaz, Black Highlighter by Woedenaz and Croquembouche, and Ghost Record by UncertaintyCrossing
 * Background and header texture's based off of webtreats: https://www.flickr.com/photos/44071822@N08/5436446554 and edited by LAN 2D, released under CC BY 2.0
@@ -16,7 +17,7 @@
     /* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
     --theme-name: "Dreamers' Library Theme";
     /* set this to your theme's full name */
-    --header-title: "×öÃÎÕßµÄÍ¼Êé¹İ";
+    --header-title: "Ã—Ã¶ÃƒÃÃ•ÃŸÂµÃ„ÃÂ¼ÃŠÃ©Â¹Ã";
     --header-font: 'Playfair Display SC','Noto Serif SC', serif;
     --title-font: 'Playfair Display SC','Noto Serif SC', serif;
     --gradient-header: url("http://wanderers-sandbox.wikidot.com/local--files/lan-2d/baloon-bg.png");
