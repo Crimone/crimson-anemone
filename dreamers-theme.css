@@ -3,9 +3,12 @@
 * Background and header texture's based off of webtreats: https://www.flickr.com/photos/44071822@N08/5436446554 and edited by LAN 2D, released under CC BY 2.0
 * The Dreaming Eye logo based off of OpenMandriva Association: https://commons.wikimedia.org/wiki/File:Oma-logo-22042013_300pp.png and edited by LAN 2D, under CC BY-SA 3.0
 * Fonts used are  */
+
+@import url("https://scp-wiki-cn.wdfiles.com/local--code/wanderers%3Adustjacket-theme/1");
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
 
-:root {
+:root:lang(cn) {
     /* If you're making a new CSS theme, please include the following three variables at minimum. */
     --theme-base: "nuscp";
     /* must be either "nuscp" or "sigma9" */
@@ -13,9 +16,9 @@
     /* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
     --theme-name: "Dreamers' Library Theme";
     /* set this to your theme's full name */
-    --header-title: "The Dreamers' Library";
-    --header-font: 'Playfair Display SC', serif;
-    --title-font: 'Playfair Display SC', serif;
+    --header-title: "做梦者的图书馆";
+    --header-font: 'Playfair Display SC','Noto Serif SC', serif;
+    --title-font: 'Playfair Display SC','Noto Serif SC', serif;
     --gradient-header: url("http://wanderers-sandbox.wikidot.com/local--files/lan-2d/baloon-bg.png");
     --logo-image: url("http://wanderers-library.wikidot.com/local--files/component:dreamers-theme/Oma-logo-22042013_300pp.png");
     /* ===STANDARD THEME COLORS=== */
