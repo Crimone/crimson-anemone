@@ -2166,7 +2166,7 @@ color: rgba(var(--white-monochrome));
 }
 
 /* there's an empty menu item in the old sidebar design */
-    #side-bar div.menu-item: empty {
+    #side-bar div.menu-item:empty {
     display: none;
   }
 
@@ -3184,20 +3184,20 @@ transition: -webkit-backdrop-filter 0.2s ease-in-out, backdrop-filter 0.2s ease-
 .yui-navset .yui-content
 {
   background-color: rgba(var(--swatch-menubg-light-color), 0.25);
-    /* content background color */;
+    /* content background color */
 }
 
 .yui-navset .yui-content,
 .yui-navset .yui-navset-top .yui-content
 {
   border-color: rgba(var(--swatch-menubg-medium-color));
-    /* content border */;
+    /* content border */
 }
 
 .yui-navset-left .yui-content
 {
   border-left-color: rgba(var(--swatch-menubg-light-color));
-    /* different border color */;
+    /* different border color */
 }
 
 /* BLOCKQUOTE */
@@ -4375,44 +4375,46 @@ text-area,
         page-break-after: avoid;
     }
 }
-}
+
 
 @-moz-document url("http://www.scp-wiki.net/") {
-#page-content {
-    display: flex;
-    flex-direction: column;
+    #page-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+        #page-content > p {
+            display: none;
+        }
+
+    .feature-block {
+        height: auto;
+    }
+
+    div[class="content-panel left-column"],
+    div[class="content-panel right-column"] {
+        display: flex;
+        flex-flow: column;
+        min-height: 15rem;
+        justify-content: flex-end;
+    }
+
+        div[class="content-panel left-column"] .panel-footer,
+        div[class="content-panel right-column"] .panel-footer {
+            max-height: 1rem;
+        }
+
+    .news-title p {
+        font-weight: bold;
+        border-bottom: 0.0625rem dashed rgba(var(--bright-accent));
+    }
+
+    #page-content > div:nth-child(4) > p:nth-child(1) > span > br:nth-child(1) {
+        display: none;
+    }
+
+    #page-content > div:nth-child(2) > div:nth-child(2) > p {
+        font-family: var(--title-font);
+    }
 }
 
-#page-content > p {
-    display: none;
-}
-
-.feature-block {
-    height: auto;
-}
-
-div[class="content-panel left-column"],
-div[class="content-panel right-column"] {
-    display: flex;
-    flex-flow: column;
-    min-height: 15rem;
-    justify-content: flex-end;
-}
-
-div[class="content-panel left-column"] .panel-footer,
-div[class="content-panel right-column"] .panel-footer {
-    max-height: 1rem;
-}
-
-.news-title p {
-    font-weight: bold;
-    border-bottom: 0.0625rem dashed rgba(var(--bright-accent));
-}
-
-#page-content > div:nth-child(4) > p:nth-child(1) > span > br:nth-child(1) {
-    display: none;
-}
-
-#page-content > div:nth-child(2) > div:nth-child(2) > p {
-    font-family: var(--title-font);
-}
