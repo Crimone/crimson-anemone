@@ -425,7 +425,7 @@ div#extra-div-1 {
             }
 
             #header h1 a::before {
-                color: rgb(1,245,230);
+                color: rgb(var(--swatch-headerh1-color));
                 text-shadow: rgba(var(--dark-gray-monochrome), 0.5) 0.125rem 0rem 0, rgba(var(--gray-monochrome), 0.5) 0.0675rem 0.1052rem 0, rgba(var(--gray-monochrome), 0.5) -0.052rem 0.1137rem 0, rgba(var(--dark-gray-monochrome), 0.5) -0.1237rem 0.0176rem 0, rgba(var(--dark-gray-monochrome), 0.5) -0.0817rem -0.0946rem 0, rgba(var(--dark-gray-monochrome), 0.5) 0.0355rem -0.1199rem 0, rgba(var(--dark-gray-monochrome), 0.5) 0.12rem -0.0349rem 0;
             }
 
