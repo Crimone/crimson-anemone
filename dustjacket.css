@@ -2013,3 +2013,41 @@ div.inner.shelf div.book::after {
             font-family: var(--header-font);
         }
 }
+
+/* ===链接反色效果=== */
+ 
+div.page-watch-options a, div.page-watch-options a:visited {
+    --hover-link-color: var(--dark-accent);
+}
+
+#footer,#license-area {
+    --hover-link-color: var(--dark-accent);
+}
+
+#breadcrumbs,.pseudocrumbs {
+    --swatch-text-secondary-color: var(--dark-accent);
+}
+
+form#edit-page-form .edit-help-34>a:active, form#edit-page-form .edit-help-34>a:hover, form#edit-page-form .edit-help-34>a:focus-within {
+    --swatch-background: var(--dark-accent);
+}
+
+#action-area a[onclick*=deleteTag]:not(.btn):active, #action-area a[onclick*=deleteTag]:not(.btn):hover, #action-area a[onclick*=deleteTag]:not(.btn):focus-within {
+    --swatch-text-secondary-color: var(--dark-accent);
+}
+
+/* ===兼容性修正=== */
+
+div#u-credit-view h2 {
+    font-family:  "EB Garamond", kaiti, 'Ma Shan Zheng',  '华文隶书', 'lisu', 'Noto Serif SC', Big Caslon, Book Antiqua, Palatino Linotype, 'Noto Serif SC', Georgia, serif;
+}
+
+div.earthworm div.inner, div.earthworm div.inner > div {
+   display: contents;
+}
+
+@media (max-width: 375px) {
+    #odialog-container div.owindow {
+        width: 100%!important;
+    }
+}
