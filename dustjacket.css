@@ -2046,8 +2046,22 @@ div.earthworm div.inner, div.earthworm div.inner > div {
    display: contents;
 }
 
-@media (max-width: 375px) {
+@media only screen and (max-width: 375px) {
+    #header h1 a {
+        font-size: 2rem;
+    }
+
+    div[id*=page-options-bottom] > a:after {
+        left: 0.25rem;
+    }
+    
     #odialog-container div.owindow {
         width: 100%!important;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    div[id*=page-options-bottom] > a:after {
+        left: 0.125rem;
     }
 }
