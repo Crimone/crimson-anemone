@@ -696,7 +696,7 @@ Will need to change :nth-child if position ever moves.*/
     }
 
         #side-bar .close-menu::before, #side-bar .close-menu::after {
-            content: "";
+            content: none;
             display: block;
             position: fixed;
             top: 0.25rem;
@@ -888,6 +888,7 @@ div#page-title, .meta-title {
         padding: 2rem 1rem;
     }
 }
+
 
 #content-wrap {
     grid-template-areas: "content content content";

@@ -1,0 +1,50 @@
+
+
+@media (min-width: 56.25rem) {
+    #login-status {
+        flex-grow: 0;
+        left: inherit;
+        right: calc(3% + var(--search-height) - .25em);
+    }
+
+    #login-status #my-account {
+        --wght: var(--ui-wght);
+    }
+
+    #search-top-box {
+        background: none;
+        box-shadow: none;
+    }
+
+    #search-top-box::after {
+        transition: none;
+    }
+
+    #search-top-box:not(:focus-within)::after {
+        background-color: rgb(var(--search-icon-focus-bg-color), 0);
+        -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+
+    #search-top-box:not(:focus-within):hover::after {
+        --clip-path: var(--clip-path);
+        background-color: rgb(var(--search-icon-focus-bg-color), 0);
+    }
+
+    #search-top-box form[id="search-top-box-form"]:not(:focus-within) {
+        max-width: var(--search-width);
+    }
+
+    #search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="text"] {
+        max-width: var(--search-height);
+        padding: 0;
+        outline-width: 0;
+        background-color: rgba(var(--search-icon-hover-bg-color), 0);
+        color: rgba(var(--search-textbox-text-color));
+        cursor: pointer;
+    }
+
+    #search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="submit"] {
+        pointer-events: none;
+    }
+}

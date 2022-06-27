@@ -1,0 +1,81 @@
+
+#content-wrap {
+    grid-template-areas: "side-bar . content .";
+    grid-template-columns: var(--sidebar-width-on-desktop) calc(50% - var(--body-width-on-desktop)/2 - (var(--sidebar-width-on-desktop))*3/2) 1fr calc(50% - var(--body-width-on-desktop)/2 - var(--sidebar-width-on-desktop)/2);
+}
+
+
+@media only screen and (min-width: 56.25rem) {
+    #side-bar .close-menu {
+        display: none;
+        position: static;
+        top: auto;
+        left: auto;
+        width: auto;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+        #side-bar .close-menu::before, #side-bar .close-menu::after {
+            content:none;
+        }
+
+    #side-bar:focus-within .close-menu {
+        pointer-events: auto;
+    }
+
+
+    #side-bar {
+        display: flex;
+        position: sticky;
+        z-index: 9;
+        top: 0;
+        left: inherit;
+        height: 100vh;
+        margin-top: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transition: background-color .15s cubic-bezier(.4,0,.2,1),scrollbar-color .15s cubic-bezier(.4,0,.2,1),border-color .15s cubic-bezier(.4,0,.2,1);
+    }
+
+        #side-bar:focus-within {
+            left: inherit;
+        }
+
+        #side-bar .side-block {
+            margin-top: 0.5rem;
+            overflow: visible;
+            border-right-width: 0rem;
+            border-left-width: 0rem;
+            border-radius: 0;
+            background-color: rgba(var(--dark-accent),.15)!important;
+        }
+
+    #main-content::before {
+        content: none;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        z-index: 99;
+        top: var(--final-header-height-on-desktop, 0);
+        right: 0;
+        width: var(--sidebar-width-on-desktop, 17em);;
+        height: calc(100% - var(--final-header-height-on-desktop, 0.688rem) - 2.313rem);
+        margin-left: 0;
+        padding-right: 0;
+        transition: transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        -webkit-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        -moz-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        -o-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+        opacity: 0.5;
+        background: rgb(var(--swatch-alternate-color, 0, 0, 0));
+        pointer-events: none;
+
+    }
+    #side-bar:focus-within ~ #main-content::before {
+        width: var(--sidebar-width-on-desktop, 17em);
+        opacity: 0;
+        pointer-events: none;
+    }
+}
