@@ -1,330 +1,448 @@
-[[module css]]
-@import url("https://evernight-aquarium.wdfiles.com/local--code/theme%3Adream-of-the-stars/1");
-
-[[/module]]
-
-[[include :evernight-aquarium:theme:color-chart]]
-
-[[collapsible show="+ Click to see code" hide="- Hide code" hideLocation="both"]]
-
-[[code type="css"]]
-
-/* Sister Luvere's Dream of the Stars Theme */
-/* 2022 Wikidot Theme */
-/* By Mercuresphere, Based off The Flowing Night Sky Theme by wallowing and Dustjacket Theme by Woedenaz and Croquembouche */
-/* Header Image: https://pixabay.com/illustrations/banner-header-sky-night-stars-1557834/ */
-/* CC BY-SA 3.0 */
-
-@import url("https://fastly.jsdelivr.net/gh/Crimone/crimson-anemone@2.3.3/dustjacket.css");
-
-/* ----BEGIN---- */
-
-:root {
-
-    /* S-CSS-P Integration */
-    /* If you're making a new CSS theme, please include the following three variables at minimum. */
-    --theme-base: "nuscp";
-    /* must be either "nuscp" or "sigma9" */
-    --theme-id: "dream-of-the-stars";
-    /* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
-    --theme-name: "Sister Luvere's Dream of the Stars Theme";
-    /* set this to your theme's full name */
-
-    /* ===STANDARD THEME COLORS=== */
-    --white-monochrome: 252, 252, 252;
-    --pale-gray-monochrome: 233, 240, 255;
-    --light-pale-gray-monochrome: 251, 242, 255;
-    --very-light-gray-monochrome: 220, 222, 230;
-    --light-gray-monochrome: 91, 97, 138;
-    --gray-monochrome: 43, 14, 116;    
-    --dark-gray-monochrome: 41, 26, 91;
-    --alt-accent: 153, 0, 255;
-
-    --gradient-header: url("https://evernight-aquarium.wdfiles.com/local--files/tale%3Aextracts/flowing.jpg");
-    --header-background-image-size: auto var(--header-height-on-desktop);
-
-    --link-color: 48, 0, 171;
-    --visited-link-color: 48, 0, 171;
-    --hover-link-color: 205, 0, 189;
-}
-
-:root:lang(cn) {
-    --header-title: "被放逐者之图书馆";
-    --body-font: Texturina, Optima, Segoe, Segoe UI, Candara, Calibri, Arial, 'Noto Sans SC', sans-serif;
-    --header-font: zuijinregular,'HanWang WeiBeiMedium-Gb5', 'Ma Shan Zheng', '华文隶书', 'lisu', 'Noto Serif SC', Big Caslon, Book Antiqua, Palatino Linotype, Georgia, serif;
-    --title-font: "EB Garamond", 'HanWang WeiBeiMedium-Gb5', 'Ma Shan Zheng', '华文隶书', 'lisu', 'Noto Serif SC', Big Caslon, Book Antiqua, Palatino Linotype, 'Noto Serif SC', Georgia, serif;
-    --UI-font: "EB Garamond", Big Caslon, Book Antiqua, Palatino Linotype, 'Noto Serif SC', Georgia, serif;
-    --mono-font: Recursive, Consolas, monaco, '仿宋', 'Noto Serif SC', monospace;
-}
-
-/* ===yui-tabs=== */
-
-#main-content {
-    --tabs-bg: var(--swatch-secondary-color);
-    --tabs-txt: var(--swatch-text-tertiary-color);
-    --tabs-hover-bg: var(--gray-monochrome);
-    --tabs-hover-txt: var(--swatch-text-secondary-color);
-    --tabs-selected-bg: var(--dark-gray-monochrome);
-    --tabs-selected-txt: var(--swatch-text-secondary-color);
-    --tabs-selected-outline: var(--dark-gray-monochrome);
-    --tabs-bottom-border-color: var(--gray-monochrome);
-    --tabs-content-bg-color: var(--swatch-secondary-color), 0.25;
-    --tabs-content-border-color: var(--swatch-tertiary-color);
-}
-
-.yui-navset .yui-nav .selected {
-    background-color: rgb(var(--dark-gray-monochrome));
-}
-
-/* ===header=== */
-
-#header h1, #header h1 a, #header h1 a::before, #header h1 a::after {
-    top: -0.1rem;
-}
-
-div#extra-div-1 {
-    background-position: center;
-}
-
-/* ===compatibility patch=== */
-div.earthworm div.inner,
-div.earthworm div.inner > div {
-    display: contents;
-}
-
-div#u-credit-view h2 {
-     font-family:  "EB Garamond", kaiti, 'Ma Shan Zheng',  '华文隶书', 'lisu', 'Noto Serif SC', Big Caslon, Book Antiqua, Palatino Linotype, 'Noto Serif SC', Georgia, serif;
-}
-
-/* ===hr and border=== */
-hr:not(.fancyhr hr), #page-title::before, .meta-title::before, #page-title::after, .meta-title::after {
-    filter: hue-rotate(207deg) saturate(109.23%) brightness(36%);
-}
-
-.fancyhr hr {
-    border-image-source: url("https://evernight-aquarium.wdfiles.com/local--files/tale%3Aextracts/wl_hr.png");
-}
-
-.fancyborder {
-    box-sizing: border-box;
-    padding: 2vw;
-    border: 2vw solid rgba(0, 0, 0, 0.5);
-    border-image: url("https://evernight-aquarium.wdfiles.com/local--files/tale%3Aextracts/wl_border.png") 600 round;
-    border-image-width: 6;
-}
-
-blockquote, .blockquote, div.blockquote, [class*="blockquote"] {
-    border: 0.1875rem outset rgb(131, 124, 156);
-}
-
-/* ===link hover color=== */
-div.page-watch-options a, div.page-watch-options a:visited {
-    --hover-link-color: var(--hover-link-color);
-}
-
-#footer {
-    --footer-link-hover-color: var(--dark-gray-monochrome);
-}
-
-#license-area {
-    --license-link-hover-color: var(--dark-gray-monochrome);
-}
-
-#breadcrumbs a:before, #breadcrumbs a:visited:before, .pseudocrumbs a:before, .pseudocrumbs a:visited:before {
-    box-shadow: .0625rem .0625rem 0 0 rgba(var(--dark-gray-monochrome),1),.25rem .0625rem 0 0 rgba(255,255,255,.85),.25rem .0625rem 0 0 rgba(var(--dark-gray-monochrome),1),.3125rem .0625rem 0 0 rgba(var(--dark-gray-monochrome),1);
-}
-
-#breadcrumbs a:active:before, #breadcrumbs a:hover:before, .pseudocrumbs a:active:before, .pseudocrumbs a:hover:before, #breadcrumbs a:focus-within:before,.pseudocrumbs a:focus-within:before {
-    background-color: rgb(var(--gray-monochrome));
-    box-shadow: 0 0 0 .25rem rgba(var(--gray-monochrome),1),0 0 0 0 rgba(var(--background-gradient-color),0),0 0 0 0 rgba(var(--swatch-background),0),0 0 0 0 rgba(var(--gray-monochrome),0)
-}
-
-/* ===mobile header font size=== */
-@media only screen and (max-width: 375px) {
-    #header h1 a {
-        font-size: 2rem;
-    }
-}
-
-@media only screen and (max-width: 425px) {
-    div[id*=page-options-bottom] > a:after {
-        left: 0.125rem;
-    }
-}
-
-@media only screen and (max-width: 375px) {
-    div[id*=page-options-bottom] > a:after {
-        left: 0.25rem;
-    }
-}
-
-@media (max-width: 375px) {
-    #odialog-container div.owindow {
-        width: 100%!important;
-    }
-}
-
-@media only screen and (max-width: 56.25rem) {
-    #search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="text"] {
-        background-color: rgba(0, 0, 0, 0);
-    }
-}
-
-/* ===默认收起用户信息栏和搜索栏=== */
-
-@media only screen and (min-width: 56.25rem) {
-    #search-top-box {
-        top: 2em;
-        right: 3%
-    }
-
-    #login-status {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        top: 2em;
-        right: calc(3% + var(--account-height) + .25em);
-        color: transparent;
-        pointer-events: none;
-        transition: color .2s cubic-bezier(.4,0,.2,1);
-        user-select: none
-    }
-
-    #login-status:active, #login-status:hover {
-        -webkit-user-select: initial;
-        -moz-user-select: initial;
-        -ms-user-select: initial;
-        color: rgb(var(--login-line-divider-color));
-        pointer-events: all;
-        user-select: auto
-    }
-
-    #login-status:focus-within {
-        -webkit-user-select: initial;
-        -moz-user-select: initial;
-        -ms-user-select: initial;
-        color: rgb(var(--login-line-divider-color));
-        pointer-events: all;
-        user-select: auto
-    }
-
-    #login-status:active #account-options, #login-status:hover #account-options {
-        pointer-events: all
-    }
-
-    #login-status:focus-within #account-options {
-        pointer-events: all
-    }
-
-    #login-status > :not(#account-topbutton):not([href*="account/messages"]) {
-        --clip-path: polygon(100% 0,100% 0,100% 100%,100% 100%);
-        -webkit-clip-path: var(--clip-path);
-        clip-path: var(--clip-path);
-        opacity: 0;
-        transition: box-shadow .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1),opacity .2s cubic-bezier(.4,0,.2,1),-webkit-text-decoration .2s cubic-bezier(.4,0,.2,1),-webkit-clip-path .2s cubic-bezier(.4,0,.2,1);
-        transition: box-shadow .2s cubic-bezier(.4,0,.2,1),text-decoration .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1),clip-path .2s cubic-bezier(.4,0,.2,1),opacity .2s cubic-bezier(.4,0,.2,1);
-        transition: box-shadow .2s cubic-bezier(.4,0,.2,1),text-decoration .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1),clip-path .2s cubic-bezier(.4,0,.2,1),opacity .2s cubic-bezier(.4,0,.2,1),-webkit-text-decoration .2s cubic-bezier(.4,0,.2,1),-webkit-clip-path .2s cubic-bezier(.4,0,.2,1)
-    }
-
-    #login-status:active > :not(#account-topbutton):not([href*="account/messages"]), #login-status:hover > :not(#account-topbutton):not([href*="account/messages"]) {
-        --clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
-        -webkit-clip-path: var(--clip-path);
-        clip-path: var(--clip-path);
-        opacity: 1
-    }
-
-    #login-status:focus-within > :not(#account-topbutton):not([href*="account/messages"]) {
-        --clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
-        -webkit-clip-path: var(--clip-path);
-        clip-path: var(--clip-path);
-        opacity: 1
-    }
-
-    #login-status #account-topbutton {
-        margin-left: 0;
-        background-color: initial;
-        pointer-events: all;
-        transition: background-color .15s cubic-bezier(.4,0,.2,1),-webkit-clip-path .15s cubic-bezier(.4,0,.2,1);
-        transition: clip-path .15s cubic-bezier(.4,0,.2,1),background-color .15s cubic-bezier(.4,0,.2,1);
-        transition: clip-path .15s cubic-bezier(.4,0,.2,1),background-color .15s cubic-bezier(.4,0,.2,1),-webkit-clip-path .15s cubic-bezier(.4,0,.2,1)
-    }
-
-    #login-status:hover #account-topbutton {
-        background-color: rgb(var(--login-arrow-color))
-    }
-
-    #login-status:before {
-        -webkit-mask-image: var(--user-account-mask);
-        -webkit-mask-size: calc(var(--account-height) - .5em);
-        -webkit-mask-position: center right;
-        -webkit-mask-repeat: no-repeat;
-        z-index: 2;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(var(--login-mobile-icon-color),0);
-        background-color: rgba(var(--login-mobile-icon-color),1);
-        content: "";
-        cursor: pointer;
-        mask-image: var(--user-account-mask);
-        mask-position: center right;
-        mask-repeat: no-repeat;
-        mask-size: calc(var(--account-height) - .5em);
-        pointer-events: all;
-        transition: background-color .15s cubic-bezier(.4,0,.2,1)
-    }
-
-    #login-status:hover:before {
-        background-color: rgba(var(--login-mobile-icon-hover-color),1)
-    }
-
-    #login-status:active:after, #login-status:active:before, #login-status:hover:after, #login-status:hover:before {
-        background-color: rgba(var(--login-mobile-icon-hover-bg-color),0);
-        cursor: auto;
-        pointer-events: none
-    }
-
-    #login-status:focus-within:after, #login-status:focus-within:before {
-        background-color: rgba(var(--login-mobile-icon-hover-bg-color),0);
-        cursor: auto;
-        pointer-events: none
-    }
-
-    #login-status #account-topbutton {
-        --clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
-        -webkit-clip-path: var(--clip-path);
-        background-color: rgba(var(--login-arrow-color),0);
-        clip-path: var(--clip-path)
-    }
-
-    #login-status:active #account-topbutton, #login-status:hover #account-topbutton {
-        --clip-path: polygon(30% 35%,70% 35%,50% 60%,50% 60%);
-        -webkit-clip-path: var(--clip-path);
-        background-color: rgb(var(--login-arrow-color));
-        clip-path: var(--clip-path)
-    }
-
-    #login-status:focus-within #account-topbutton {
-        --clip-path: polygon(30% 35%,70% 35%,50% 60%,50% 60%);
-        -webkit-clip-path: var(--clip-path);
-        background-color: rgb(var(--login-arrow-color));
-        clip-path: var(--clip-path)
-    }
-
-    #login-status #account-options {
-        margin: 0
-    }
-
-    #login-status a[href*="account/messages"] {
-        color: rgb(var(--login-myaccount-color));
-        pointer-events: all
-    }
-}
-
-/* ----END---- */
-
-[[/code]]
-
+[[div class="side-block" style="background-color: #fff0f0;"]]
+[[collapsible show="相关参考" hide="相关参考"]]
+[[div class="menu-item"]]
+[http://scp-wiki-cn.wikidot.com/advanced-formatting-and-you 你与高级格式]
+[[/div]]
+[[div class="menu-item"]]
+[http://scp-wiki-cn.wikidot.com/photoshopping-your-scp PS你的SCP]
+[[/div]]
+[[div class="menu-item"]]
+[http://scp-wiki-cn.wikidot.com/scp-style-resource SCP格式资源]
+[[/div]]
+[[div class="menu-item"]]
+[http://scp-wiki-cn.wikidot.com/wiki-syntax 维基语法]
+[[/div]]
 [[/collapsible]]
+[[/div]]
+
+[[div class="side-block music-box"]]
+[[collapsible show="BGM" hide="BGM"]]
+[[div class="menu-item"]]
+[[html]]
+<audio preload="metadata" controls style="width: 200px;">
+<source src="https://evernight-aquarium.wdfiles.com/local--files/tale%3Aextracts/OP%E6%9B%B2%E3%80%8C%E3%82%86%E3%82%812%E3%81%A3%E3%81%8D%E3%80%8DBy%E9%9F%B3%E5%B8%AB%E7%AB%B9%E5%86%85.mp3">
+</audio>
+[[/html]]
+BGM：OP曲「ゆめ2っき」By音師竹内
+[[/div]]
+[[/collapsible]]
+[[/div]]
+
+
+[[div class="side-block stand-box"]]
+[[=]]
+[[div class="heading"]]
+++++* 快捷按钮
+[[/div]]
+[[span_ class="ocinfo side-editing"]]页面编辑中…[[/span]]
+[[span class="ocinfo-box"]]此功能由[[*user boyu12]]提供，感谢你！[[/span]]
+[[div class="menu-item"]]
+[[button edit text="编辑"]] | [[button source text="页面源代码"]]
+[[/div]]
+[[div class="menu-item"]]
+[[button history text="历史记录"]] | [[button files text="附件"]]
+[[/div]]
+[[div class="menu-item"]]
+[#header 页面顶端] | [#footer 页面底端] | [#page-options-container 操作选项]
+[[/div]]
+[[/=]]
+[[/div]]
+
+[[div class="side-block copy-block"]]
+[[collapsible show="★复制工具★" hide="★复制工具★" hideLocation="both"]]
+[[div class="octool"]]
+[[div class="heading"]]
+折叠
+[[/div]]
+[[html]]
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style type="text/css">
+#button {transition-duration: 1.5s;cursor: pointer;padding: 0.2em 0.6em;font-weight: normal;font-size: 0.8em;color: #666;border: 1px solid #aaa293;border-radius: 3px;background-color: #fff3b8; margin-top: 0.3em;}#button:hover {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}#button:active {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}.wrapper {width: 84px; text-align: center;}#wiki-syntax,#button {display: inline-block;}#wiki-syntax {font-family: 'Andale Mono', 'Courier New', Courier, monospace;width: 84px; padding: 0; margin: 0; background: #eee;border: 1px solid #bebebe;font-size: 0.8em; border-radius:1px;resize: none;overflow:hidden;}#wiki-syntax:focus {background: #edf4ff;border: 1px solid #4881d9;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<textarea id="wiki-syntax" rows="1">[[collapsible show="+ 显示" hide="- 隐藏"]]
+内容
+[[/collapsible]]</textarea><br>
+<button id="button">复制</button>
+</div>
+<script>
+function execCopy(string){var temp = document.createElement('div'); temp.appendChild(document.createElement('pre')).textContent = string;var s = temp.style; s.position = 'fixed'; s.left = '-100%'; document.body.appendChild(temp); document.getSelection().selectAllChildren(temp); var result = document.execCommand('copy'); document.body.removeChild(temp); return result;}var copySyntax = document.getElementById('wiki-syntax'); var button = document.getElementById('button'); button.onclick = function(){if(execCopy(copySyntax.value)){}else {alert('复制失败！');}};
+</script>
+</body>
+[[/html]]
+[[div class="heading"]]
+fancyhr
+[[/div]]
+[[html]]
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style type="text/css">
+#button {transition-duration: 1.5s;cursor: pointer;padding: 0.2em 0.6em;font-weight: normal;font-size: 0.8em;color: #666;border: 1px solid #aaa293;border-radius: 3px;background-color: #fff3b8; margin-top: 0.3em;}#button:hover {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}#button:active {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}.wrapper {width: 84px; text-align: center;}#wiki-syntax,#button {display: inline-block;}#wiki-syntax {font-family: 'Andale Mono', 'Courier New', Courier, monospace;width: 84px; padding: 0; margin: 0; background: #eee;border: 1px solid #bebebe;font-size: 0.8em; border-radius:1px;resize: none;overflow:hidden;}#wiki-syntax:focus {background: #edf4ff;border: 1px solid #4881d9;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<textarea id="wiki-syntax" rows="1">[[div_ class="fancyhr"]]
+----
+[[/div]]</textarea><br>
+<button id="button">复制</button>
+</div>
+<script>
+function execCopy(string){var temp = document.createElement('div'); temp.appendChild(document.createElement('pre')).textContent = string;var s = temp.style; s.position = 'fixed'; s.left = '-100%'; document.body.appendChild(temp); document.getSelection().selectAllChildren(temp); var result = document.execCommand('copy'); document.body.removeChild(temp); return result;}var copySyntax = document.getElementById('wiki-syntax'); var button = document.getElementById('button'); button.onclick = function(){if(execCopy(copySyntax.value)){}else {alert('复制失败！');}};
+</script>
+</body>
+[[/html]]
+[[div class="heading"]]
+作者信息与评分模块
+[[/div]]
+[[html]]
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style type="text/css">
+#button {transition-duration: 1.5s;cursor: pointer;padding: 0.2em 0.6em;font-weight: normal;font-size: 0.8em;color: #666;border: 1px solid #aaa293;border-radius: 3px;background-color: #fff3b8; margin-top: 0.3em;}#button:hover {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}#button:active {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}.wrapper {width: 84px; text-align: center;}#wiki-syntax,#button {display: inline-block;}#wiki-syntax {font-family: 'Andale Mono', 'Courier New', Courier, monospace;width: 84px; padding: 0; margin: 0; background: #eee;border: 1px solid #bebebe;font-size: 0.8em; border-radius:1px;resize: none;overflow:hidden;}#wiki-syntax:focus {background: #edf4ff;border: 1px solid #4881d9;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<textarea id="wiki-syntax" rows="1">[[include :scp-wiki-cn:credit:start]]
+
+**作者：**[[*user Mercuresphere]]
+
+如果您喜欢我的风格的话，欢迎您来我的[[[mercuresphere|作者页]]]看看我的其他作品。
+
+[[include :scp-wiki-cn:credit:end]]</textarea><br>
+<button id="button">复制</button>
+</div>
+<script>
+function execCopy(string){var temp = document.createElement('div'); temp.appendChild(document.createElement('pre')).textContent = string;var s = temp.style; s.position = 'fixed'; s.left = '-100%'; document.body.appendChild(temp); document.getSelection().selectAllChildren(temp); var result = document.execCommand('copy'); document.body.removeChild(temp); return result;}var copySyntax = document.getElementById('wiki-syntax'); var button = document.getElementById('button'); button.onclick = function(){if(execCopy(copySyntax.value)){}else {alert('复制失败！');}};
+</script>
+</body>
+[[/html]]
+[[div class="heading"]]
+文字标识
+[[/div]]
+[[html]]
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style type="text/css">
+#button {transition-duration: 1.5s;cursor: pointer;padding: 0.2em 0.6em;font-weight: normal;font-size: 0.8em;color: #666;border: 1px solid #aaa293;border-radius: 3px;background-color: #fff3b8; margin-top: 0.3em;}#button:hover {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}#button:active {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}.wrapper {width: 84px; text-align: center;}#wiki-syntax,#button {display: inline-block;}#wiki-syntax {font-family: 'Andale Mono', 'Courier New', Courier, monospace;width: 84px; padding: 0; margin: 0; background: #eee;border: 1px solid #bebebe;font-size: 0.8em; border-radius:1px;resize: none;overflow:hidden;}#wiki-syntax:focus {background: #edf4ff;border: 1px solid #4881d9;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<textarea id="wiki-syntax" rows="1">[[span class="ruby"]]文字[[span class="rt"]]标识[[/span]][[/span]]</textarea><br>
+<button id="button">复制</button>
+</div>
+<script>
+function execCopy(string){var temp = document.createElement('div'); temp.appendChild(document.createElement('pre')).textContent = string;var s = temp.style; s.position = 'fixed'; s.left = '-100%'; document.body.appendChild(temp); document.getSelection().selectAllChildren(temp); var result = document.execCommand('copy'); document.body.removeChild(temp); return result;}var copySyntax = document.getElementById('wiki-syntax'); var button = document.getElementById('button'); button.onclick = function(){if(execCopy(copySyntax.value)){}else {alert('复制失败！');}};
+</script>
+</body>
+[[/html]]
+[[div class="heading"]]
+Tabview
+[[/div]]
+[[html]]
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style type="text/css">
+#button {transition-duration: 1.5s;cursor: pointer;padding: 0.2em 0.6em;font-weight: normal;font-size: 0.8em;color: #666;border: 1px solid #aaa293;border-radius: 3px;background-color: #fff3b8; margin-top: 0.3em;}#button:hover {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}#button:active {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}.wrapper {width: 84px; text-align: center;}#wiki-syntax,#button {display: inline-block;}#wiki-syntax {font-family: 'Andale Mono', 'Courier New', Courier, monospace;width: 84px; padding: 0; margin: 0; background: #eee;border: 1px solid #bebebe;font-size: 0.8em; border-radius:1px;resize: none;overflow:hidden;}#wiki-syntax:focus {background: #edf4ff;border: 1px solid #4881d9;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<textarea id="wiki-syntax" rows="1">[[tabview]]
+[[tab 标题 1]]
+内容 1
+[[/tab]]
+[[tab 标题 2]]
+内容 2。你可以自行添加更多Tab。
+[[/tab]]
+[[/tabview]]</textarea><br>
+<button id="button">复制</button>
+</div>
+<script>
+function execCopy(string){var temp = document.createElement('div'); temp.appendChild(document.createElement('pre')).textContent = string;var s = temp.style; s.position = 'fixed'; s.left = '-100%'; document.body.appendChild(temp); document.getSelection().selectAllChildren(temp); var result = document.execCommand('copy'); document.body.removeChild(temp); return result;}var copySyntax = document.getElementById('wiki-syntax'); var button = document.getElementById('button'); button.onclick = function(){if(execCopy(copySyntax.value)){}else {alert('复制失败！');}};
+</script>
+</body>
+[[/html]]
+[[div class="heading"]]
+插图
+[[/div]]
+[[html]]
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style type="text/css">
+#button {transition-duration: 1.5s;cursor: pointer;padding: 0.2em 0.6em;font-weight: normal;font-size: 0.8em;color: #666;border: 1px solid #aaa293;border-radius: 3px;background-color: #fff3b8; margin-top: 0.3em;}#button:hover {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}#button:active {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}.wrapper {width: 84px; text-align: center;}#wiki-syntax,#button {display: inline-block;}#wiki-syntax {font-family: 'Andale Mono', 'Courier New', Courier, monospace;width: 84px; padding: 0; margin: 0; background: #eee;border: 1px solid #bebebe;font-size: 0.8em; border-radius:1px;resize: none;overflow:hidden;}#wiki-syntax:focus {background: #edf4ff;border: 1px solid #4881d9;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<textarea id="wiki-syntax" rows="1">[[include component:image-block
+|name=图片链接
+|caption=描述文字
+]]</textarea><br>
+<button id="button">复制</button>
+</div>
+<script>
+function execCopy(string){var temp = document.createElement('div'); temp.appendChild(document.createElement('pre')).textContent = string;var s = temp.style; s.position = 'fixed'; s.left = '-100%'; document.body.appendChild(temp); document.getSelection().selectAllChildren(temp); var result = document.execCommand('copy'); document.body.removeChild(temp); return result;}var copySyntax = document.getElementById('wiki-syntax'); var button = document.getElementById('button'); button.onclick = function(){if(execCopy(copySyntax.value)){}else {alert('复制失败！');}};
+</script>
+</body>
+[[/html]]
+[[div class="heading"]]
+脚注
+[[/div]]
+[[html]]
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style type="text/css">
+#button {transition-duration: 1.5s;cursor: pointer;padding: 0.2em 0.6em;font-weight: normal;font-size: 0.8em;color: #666;border: 1px solid #aaa293;border-radius: 3px;background-color: #fff3b8; margin-top: 0.3em;}#button:hover {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}#button:active {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}.wrapper {width: 84px; text-align: center;}#wiki-syntax,#button {display: inline-block;}#wiki-syntax {font-family: 'Andale Mono', 'Courier New', Courier, monospace;width: 84px; padding: 0; margin: 0; background: #eee;border: 1px solid #bebebe;font-size: 0.8em; border-radius:1px;resize: none;overflow:hidden;}#wiki-syntax:focus {background: #edf4ff;border: 1px solid #4881d9;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<textarea id="wiki-syntax" rows="1">[[footnote]]脚注内容[[/footnote]]</textarea><br>
+<button id="button">复制</button>
+</div>
+<script>
+function execCopy(string){var temp = document.createElement('div'); temp.appendChild(document.createElement('pre')).textContent = string;var s = temp.style; s.position = 'fixed'; s.left = '-100%'; document.body.appendChild(temp); document.getSelection().selectAllChildren(temp); var result = document.execCommand('copy'); document.body.removeChild(temp); return result;}var copySyntax = document.getElementById('wiki-syntax'); var button = document.getElementById('button'); button.onclick = function(){if(execCopy(copySyntax.value)){}else {alert('复制失败！');}};
+</script>
+</body>
+[[/html]]
+[[div class="heading"]]
+表格
+[[/div]]
+[[html]]
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style type="text/css">
+#button {transition-duration: 1.5s;cursor: pointer;padding: 0.2em 0.6em;font-weight: normal;font-size: 0.8em;color: #666;border: 1px solid #aaa293;border-radius: 3px;background-color: #fff3b8; margin-top: 0.3em;}#button:hover {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}#button:active {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}.wrapper {width: 84px; text-align: center;}#wiki-syntax,#button {display: inline-block;}#wiki-syntax {font-family: 'Andale Mono', 'Courier New', Courier, monospace;width: 84px; padding: 0; margin: 0; background: #eee;border: 1px solid #bebebe;font-size: 0.8em; border-radius:1px;resize: none;overflow:hidden;}#wiki-syntax:focus {background: #edf4ff;border: 1px solid #4881d9;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<textarea id="wiki-syntax" rows="1">||~ 标题 1 ||~ 标题 2 ||~ 标题 3 ||
+|| 内容 1 || 内容 2 || 内容 3 ||
+|||| 长内容 4 || 内容 5 ||
+||内容 6 |||| 长内容 7 ||
+|||||| 超长内容 8||</textarea><br>
+<button id="button">复制</button>
+</div>
+<script>
+function execCopy(string){var temp = document.createElement('div'); temp.appendChild(document.createElement('pre')).textContent = string;var s = temp.style; s.position = 'fixed'; s.left = '-100%'; document.body.appendChild(temp); document.getSelection().selectAllChildren(temp); var result = document.execCommand('copy'); document.body.removeChild(temp); return result;}var copySyntax = document.getElementById('wiki-syntax'); var button = document.getElementById('button'); button.onclick = function(){if(execCopy(copySyntax.value)){}else {alert('复制失败！');}};
+</script>
+</body>
+[[/html]]
+[[div class="heading"]]
+黑条（█）
+[[/div]]
+[[html]]
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style type="text/css">
+#button {transition-duration: 1.5s;cursor: pointer;padding: 0.2em 0.6em;font-weight: normal;font-size: 0.8em;color: #666;border: 1px solid #aaa293;border-radius: 3px;background-color: #fff3b8; margin-top: 0.3em;}#button:hover {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}#button:active {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}.wrapper {width: 84px; text-align: center;}#wiki-syntax,#button {display: inline-block;}#wiki-syntax {font-family: 'Andale Mono', 'Courier New', Courier, monospace;width: 84px; padding: 0; margin: 0; background: #eee;border: 1px solid #bebebe;font-size: 0.8em; border-radius:1px;resize: none;overflow:hidden;}#wiki-syntax:focus {background: #edf4ff;border: 1px solid #4881d9;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<textarea id="wiki-syntax" rows="1">████</textarea><br>
+<button id="button">复制</button>
+</div>
+<script>
+function execCopy(string){var temp = document.createElement('div'); temp.appendChild(document.createElement('pre')).textContent = string;var s = temp.style; s.position = 'fixed'; s.left = '-100%'; document.body.appendChild(temp); document.getSelection().selectAllChildren(temp); var result = document.execCommand('copy'); document.body.removeChild(temp); return result;}var copySyntax = document.getElementById('wiki-syntax'); var button = document.getElementById('button'); button.onclick = function(){if(execCopy(copySyntax.value)){}else {alert('复制失败！');}};
+</script>
+</body>
+[[/html]]
+[[div class="heading"]]
+字体颜色
+[[/div]]
+[[html]]
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style type="text/css">
+#button {transition-duration: 1.5s;cursor: pointer;padding: 0.2em 0.6em;font-weight: normal;font-size: 0.8em;color: #666;border: 1px solid #aaa293;border-radius: 3px;background-color: #fff3b8; margin-top: 0.3em;}#button:hover {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}#button:active {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}.wrapper {width: 84px; text-align: center;}#wiki-syntax,#button {display: inline-block;}#wiki-syntax {font-family: 'Andale Mono', 'Courier New', Courier, monospace;width: 84px; padding: 0; margin: 0; background: #eee;border: 1px solid #bebebe;font-size: 0.8em; border-radius:1px;resize: none;overflow:hidden;}#wiki-syntax:focus {background: #edf4ff;border: 1px solid #4881d9;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<textarea id="wiki-syntax" rows="1">##333|内容##</textarea><br>
+<button id="button">复制</button>
+</div>
+<script>
+function execCopy(string){var temp = document.createElement('div'); temp.appendChild(document.createElement('pre')).textContent = string;var s = temp.style; s.position = 'fixed'; s.left = '-100%'; document.body.appendChild(temp); document.getSelection().selectAllChildren(temp); var result = document.execCommand('copy'); document.body.removeChild(temp); return result;}var copySyntax = document.getElementById('wiki-syntax'); var button = document.getElementById('button'); button.onclick = function(){if(execCopy(copySyntax.value)){}else {alert('复制失败！');}};
+</script>
+</body>
+[[/html]]
+[[div class="heading"]]
+CSS模块
+[[/div]]
+[[html]]
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style type="text/css">
+#button {transition-duration: 1.5s;cursor: pointer;padding: 0.2em 0.6em;font-weight: normal;font-size: 0.8em;color: #666;border: 1px solid #aaa293;border-radius: 3px;background-color: #fff3b8; margin-top: 0.3em;}#button:hover {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}#button:active {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}.wrapper {width: 84px; text-align: center;}#wiki-syntax,#button {display: inline-block;}#wiki-syntax {font-family: 'Andale Mono', 'Courier New', Courier, monospace;width: 84px; padding: 0; margin: 0; background: #eee;border: 1px solid #bebebe;font-size: 0.8em; border-radius:1px;resize: none;overflow:hidden;}#wiki-syntax:focus {background: #edf4ff;border: 1px solid #4881d9;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<textarea id="wiki-syntax" rows="1">[[module CSS]]
+
+[[/module]]</textarea><br>
+<button id="button">复制</button>
+</div>
+<script>
+function execCopy(string){var temp = document.createElement('div'); temp.appendChild(document.createElement('pre')).textContent = string;var s = temp.style; s.position = 'fixed'; s.left = '-100%'; document.body.appendChild(temp); document.getSelection().selectAllChildren(temp); var result = document.execCommand('copy'); document.body.removeChild(temp); return result;}var copySyntax = document.getElementById('wiki-syntax'); var button = document.getElementById('button'); button.onclick = function(){if(execCopy(copySyntax.value)){}else {alert('复制失败！');}};
+</script>
+</body>
+[[/html]]
+[[div class="heading"]]
+等式
+[[/div]]
+[[html]]
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style type="text/css">
+#button {transition-duration: 1.5s;cursor: pointer;padding: 0.2em 0.6em;font-weight: normal;font-size: 0.8em;color: #666;border: 1px solid #aaa293;border-radius: 3px;background-color: #fff3b8; margin-top: 0.3em;}#button:hover {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}#button:active {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}.wrapper {width: 84px; text-align: center;}#wiki-syntax,#button {display: inline-block;}#wiki-syntax {font-family: 'Andale Mono', 'Courier New', Courier, monospace;width: 84px; padding: 0; margin: 0; background: #eee;border: 1px solid #bebebe;font-size: 0.8em; border-radius:1px;resize: none;overflow:hidden;}#wiki-syntax:focus {background: #edf4ff;border: 1px solid #4881d9;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<textarea id="wiki-syntax" rows="1">[[math]]
+\begin{align}
+E = mc^2
+\end{align}
+[[/math]]</textarea><br>
+<button id="button">复制</button>
+</div>
+<script>
+function execCopy(string){var temp = document.createElement('div'); temp.appendChild(document.createElement('pre')).textContent = string;var s = temp.style; s.position = 'fixed'; s.left = '-100%'; document.body.appendChild(temp); document.getSelection().selectAllChildren(temp); var result = document.execCommand('copy'); document.body.removeChild(temp); return result;}var copySyntax = document.getElementById('wiki-syntax'); var button = document.getElementById('button'); button.onclick = function(){if(execCopy(copySyntax.value)){}else {alert('复制失败！');}};
+</script>
+</body>
+[[/html]]
+[[div class="heading"]]
+行内等式
+[[/div]]
+[[html]]
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style type="text/css">
+#button {transition-duration: 1.5s;cursor: pointer;padding: 0.2em 0.6em;font-weight: normal;font-size: 0.8em;color: #666;border: 1px solid #aaa293;border-radius: 3px;background-color: #fff3b8; margin-top: 0.3em;}#button:hover {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}#button:active {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}.wrapper {width: 84px; text-align: center;}#wiki-syntax,#button {display: inline-block;}#wiki-syntax {font-family: 'Andale Mono', 'Courier New', Courier, monospace;width: 84px; padding: 0; margin: 0; background: #eee;border: 1px solid #bebebe;font-size: 0.8em; border-radius:1px;resize: none;overflow:hidden;}#wiki-syntax:focus {background: #edf4ff;border: 1px solid #4881d9;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<textarea id="wiki-syntax" rows="1">[[$ E = mc^2 $]]</textarea><br>
+<button id="button">复制</button>
+</div>
+<script>
+function execCopy(string){var temp = document.createElement('div'); temp.appendChild(document.createElement('pre')).textContent = string;var s = temp.style; s.position = 'fixed'; s.left = '-100%'; document.body.appendChild(temp); document.getSelection().selectAllChildren(temp); var result = document.execCommand('copy'); document.body.removeChild(temp); return result;}var copySyntax = document.getElementById('wiki-syntax'); var button = document.getElementById('button'); button.onclick = function(){if(execCopy(copySyntax.value)){}else {alert('复制失败！');}};
+</script>
+</body>
+[[/html]]
+[[div class="heading"]]
+SCP-CN模版
+[[/div]]
+[[html]]
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style type="text/css">
+#button {transition-duration: 1.5s;cursor: pointer;padding: 0.2em 0.6em;font-weight: normal;font-size: 0.8em;color: #666;border: 1px solid #aaa293;border-radius: 3px;background-color: #fff3b8; margin-top: 0.3em;}#button:hover {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}#button:active {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}.wrapper {width: 84px; text-align: center;}#wiki-syntax,#button {display: inline-block;}#wiki-syntax {font-family: 'Andale Mono', 'Courier New', Courier, monospace;width: 84px; padding: 0; margin: 0; background: #eee;border: 1px solid #bebebe;font-size: 0.8em; border-radius:1px;resize: none;overflow:hidden;}#wiki-syntax:focus {background: #edf4ff;border: 1px solid #4881d9;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<textarea id="wiki-syntax" rows="1">[[>]]
+[[module Rate]]
+[[/>]]
+
+**项目编号：**SCP-CN-XXXX
+
+**项目等级：**Safe/Euclid/Keter（表明分级）
+
+**特殊收容措施：**[说明收容措施的段落]
+
+**描述：**[描述SCP的段落]
+
+**附录：**[可选的附加段落]</textarea><br>
+<button id="button">复制</button>
+</div>
+<script>
+function execCopy(string){var temp = document.createElement('div'); temp.appendChild(document.createElement('pre')).textContent = string;var s = temp.style; s.position = 'fixed'; s.left = '-100%'; document.body.appendChild(temp); document.getSelection().selectAllChildren(temp); var result = document.execCommand('copy'); document.body.removeChild(temp); return result;}var copySyntax = document.getElementById('wiki-syntax'); var button = document.getElementById('button'); button.onclick = function(){if(execCopy(copySyntax.value)){}else {alert('复制失败！');}};
+</script>
+</body>
+[[/html]]
+[[/div]]
+//[[size 80%]]如果复制工具未能显示，请刷新页面。[[/size]]//
+[[/collapsible]]
+[[/div]]
+
+[[div class="side-block" style="background-color: #fff0f0;"]]
+[[collapsible show="关于" hide="关于" hideLocation="both"]]
+[[div class="aboutbox"]]
+[[size 80%]]**作者：**[[*user 7happy7]][[/size]]
+[[size 80%]]**协助：**[[*user C-take]][[/size]]
+[[size .8em]]**中文翻译：**[[*user Sekai_s]][[/size]]
+[[size 80%]]**授权协议：**CC BY-SA 3.0[[/size]]
+[[/div]]
+[[div_ class="heading"]]
+参考资料
+[[/div]]
+[[div class="aboutbox"]]
+[[size 80%]]**标题：**Cocoonist's Sidebar[[/size]]
+[[size 80%]]**原地址：**[http://shitake-crude-production.wikidot.com/cocoonist-s-sidebar 椎茸天然製造][[/size]]
+[[size 80%]]**作者：**[[*user Cocoonist]][[/size]]
+[[size 80%]][[span style="color: transparent;"]]**作者：**[[/span]][[*user Dr Devan]][[/size]]
+[[size 80%]]**授权协议：**CC BY-SA 3.0[[/size]]
+[[/div]]
+[[div_ class="heading"]]
+联系我
+[[/div]][[size 80%]]如果你有任何问题，请联系作者：[http://www.wikidot.com/account/messages#/new/3427263 发送Wikidot私人讯息]（[[user 7happy7]]）[[/size]]
+[[div_ class="heading"]]
+如何使用：
+[[/div]][[size 80%]]将下面的代码复制到你的沙盒页中：[[/size]]
+ _
+[[html]]
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style type="text/css">
+#button {transition-duration: 1.5s;cursor: pointer;padding: 0.2em 0.6em;font-weight: normal;font-size: 0.8em;color: #666;border: 1px solid #aaa293;border-radius: 3px;background-color: #fff3b8; margin-top: 0.3em;}#button:hover {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}#button:active {color: #666;border: 1px solid #aaa293;background-color: #f58282;text-decoration: underline;}.wrapper {width: 168px; text-align: center;}#wiki-syntax,#button {display: inline-block;}#wiki-syntax {font-family: 'Andale Mono', 'Courier New', Courier, monospace;width: 168px; padding: 0; margin: 0; background: #eee;border: 1px solid #bebebe;font-size: 0.8em; border-radius:1px;resize: none;overflow:hidden;}#wiki-syntax:focus {background: #edf4ff;border: 1px solid #4881d9;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<textarea id="wiki-syntax" rows="1">[[include :scpsandboxcn:component:usefultool-module]]</textarea><br>
+<button id="button">复制</button>
+</div>
+<script>
+function execCopy(string){var temp = document.createElement('div'); temp.appendChild(document.createElement('pre')).textContent = string;var s = temp.style; s.position = 'fixed'; s.left = '-100%'; document.body.appendChild(temp); document.getSelection().selectAllChildren(temp); var result = document.execCommand('copy'); document.body.removeChild(temp); return result;}var copySyntax = document.getElementById('wiki-syntax'); var button = document.getElementById('button'); button.onclick = function(){if(execCopy(copySyntax.value)){}else {alert('复制失败！');}};
+</script>
+</body>
+[[/html]]
+[[/collapsible]]
+[[/div]]
+
+[[div class="close-window"]]
+[[/div]]
+
+~~~~
+
+[[a href="###" class="close-menu"]]
+[[image https://fastly.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/img/black.png style="z-index=-1; opacity: 0.3;"]]
+[[/a]]
