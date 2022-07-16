@@ -26,8 +26,8 @@
 ==============================================================================*/
 @import url('https://bhl.scpwikicn.com/css/min/normalize.min.css');
 @import url('https://bhl.scpwikicn.com/css/min/black-highlighter.min.css');
-@import url("https://fastly.jsdelivr.net/gh/Crimone/wanderers-dustjacket-fonts@4.3.5/typefaces.css");
-@import url("https://fastly.jsdelivr.net/gh/Crimone/wanderers-dustjacket-fonts@4.3.5/fonts.css");
+@import url("https://fastly.jsdelivr.net/gh/Crimone/wanderers-dustjacket-fonts@4.3.7/typefaces.css");
+@import url("https://fastly.jsdelivr.net/gh/Crimone/wanderers-dustjacket-fonts@4.3.7/fonts.css");
 
 /*  中文调整
 ==============================================================================*/
@@ -1964,10 +1964,6 @@ form#edit-page-form .edit-help-34>a:active, form#edit-page-form .edit-help-34>a:
 }
 
 /* ===兼容性修正=== */
-
-div#u-credit-view h2 {
-    font-family:  "EB Garamond", kaiti, Big Caslon, Book Antiqua, Palatino Linotype, Georgia, serif;
-}
 
 div.earthworm div.inner, div.earthworm div.inner > div {
    display: contents;
