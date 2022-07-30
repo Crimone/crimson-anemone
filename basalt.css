@@ -16,6 +16,9 @@
 
 */
 
+
+@import url('https://scp-wiki.wdfiles.com/local--code/component%3Aacs-animation/1');
+@import url("https://scp-wiki.wdfiles.com/local--code/component:betterfootnotes/1");
 @import url('https://scp-wiki-cn.wdfiles.com/local--code/theme%3Apaperstack/1');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap');
@@ -2802,3 +2805,130 @@ color: rgb(var(--five-color));
     color: #ff8787;
 }
 
+
+
+/* source: http://ah-sandbox.wikidot.com/component:collapsible-sidebar-x1 */
+
+#top-bar .open-menu a {
+    position: fixed;
+    top: 0.5em;
+    left: 0.5em;
+    z-index: 5;
+    font-family: 'Nanum Gothic', san-serif;
+    font-size: 30px;
+    font-weight: 700;
+    width: 30px;
+    height: 30px;
+    line-height: 0.9em;
+    text-align: center;
+    border: 0.2em solid #888;
+    background-color: #fff;
+    border-radius: 3em;
+    color: #888;
+}
+
+@media (min-width: 768px) {
+
+#top-bar .mobile-top-bar {
+    display: block;
+}
+
+#top-bar .mobile-top-bar li {
+    display: none;
+}
+
+#main-content {
+    max-width: 708px;
+    margin: 0 auto;
+    padding: 0;
+    transition: max-width 0.2s ease-in-out;
+}
+
+#side-bar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -20em;
+    width: 17.75em;
+    height: 100%;
+    margin: 0;
+    overflow-y: auto;
+    z-index: 10;
+    padding: 1em 1em 0 1em;
+    background-color: rgba(0,0,0,0.1);
+    transition: left 0.4s ease-in-out;
+
+    scrollbar-width: thin;
+}
+
+#side-bar:target {
+    left: 0;
+}
+#side-bar:focus-within:not(:target) {
+    left: 0;
+}
+
+#side-bar:target .close-menu {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin-left: 19.75em;
+    opacity: 0;
+    z-index: -1;
+    visibility: visible;
+}
+#side-bar:not(:target) .close-menu { display: none; }
+
+#top-bar .open-menu a:hover {
+    text-decoration: none;
+}
+
+/* FIREFOX-SPECIFIC COMPATIBILITY METHOD */
+@supports (-moz-appearance:none) {
+#top-bar .open-menu a {
+    pointer-events: none;
+}
+#side-bar:not(:target) .close-menu {
+    display: block;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* This pseudo-element is meant to overlay the regular sidebar button
+so the fixed positioning (top, left, right and/or bottom) has to match */
+
+#side-bar .close-menu::before {
+    content: "";
+    position: fixed;
+    z-index: 5;
+    display: block;
+
+    top: 0.5em;
+    left: 0.5em;
+
+    border: 0.2em solid transparent;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    line-height: 0.9em;
+
+    pointer-events: all;
+    cursor: pointer;
+}
+#side-bar:focus-within {
+    left: 0;
+}
+#side-bar:focus-within .close-menu::before {
+    pointer-events: none;
+}
+}
+}
+
+div#u-credit-view div.modalbox div:first-child {
+    background-image: linear-gradient(125deg,rgba(var(--modal-header-stripe),.75) 25%,transparent 25%,transparent 50%,rgba(var(--modal-header-stripe),.75) 50%,rgba(var(--modal-header-stripe),.75) 75%,transparent 75%,transparent 100%);
+    background-size: 3rem 4.35rem;
+    background-color: rgb(var(--modal-header-bg));
+}
