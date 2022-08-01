@@ -8,7 +8,7 @@
 import base64
 #import codecs #解码其他编码格式如GBK需要的模块
 
-decoded_file_name=".\\files\\zuijinregular-normal.woff"  # 定义转换后的文件名，包括后缀
+decoded_file_name=".\\files\\punctuation-marks.woff"  # 定义转换后的文件名，包括后缀
 
 def base_to_file():
     base64String = ""
