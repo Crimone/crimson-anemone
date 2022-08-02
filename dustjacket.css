@@ -2114,4 +2114,75 @@ div.earthworm div.inner>div {
 
 }
 
+/* ===内置解决saving pages问题的模块=== */
+
+body[class="wait"] #odialog-shader-iframe,
+body[class="wait"] #odialog-shader {
+    display: none !important;
+}
+
+#odialog-container {
+    position: fixed !important;
+}
+
+body[class="wait"] #odialog-container {
+    z-index: -1;
+}
+
+body[class="wait"] #odialog-container #owindow-1 {
+    display: none !important;
+}
+
+body[class="wait"] a[name="page-top"][target]+div #main-content #action-area div#lock-info {
+    background-color: #ffcdd2;
+    border: 1px solid #e53935;
+}
+
+div#lock-info {
+    font-size: 0;
+    margin: .8rem 0;
+    padding: 0.4rem .8rem;
+}
+
+div#lock-info::before {
+    content: '您握有一个独占的15 分钟锁定，这将会阻止其他人编辑您正在作业的页面。\A这个锁定将在闲置 ';
+    display: inline;
+    font-size: .82rem;
+    white-space: pre-wrap;
+}
+
+div#lock-info>strong {
+    font-size: .82rem;
+}
+
+div#lock-info>br {
+    display: none;
+}
+
+div#lock-info::after {
+    content: ' 秒后失效。';
+    display: inline;
+    font-size: .82rem;
+}
+
+body[class="wait"] a[name="page-top"][target]+div #main-content #action-area div#lock-info::before {
+    content: '保存页面中……\A若此提示已经显示了很长时间，建议将编辑框中的内容复制到剪切板然后刷新本页重新编辑。';
+    display: inline;
+    font-size: .82rem;
+    color: red;
+    white-space: pre-wrap;
+}
+
+body[class="wait"] a[name="page-top"][target]+div #main-content #action-area div#lock-info::after {
+    font-size: 0;
+}
+
+body[class="wait"] a[name="page-top"][target]+div #main-content #action-area div#lock-info>strong {
+    font-size: 0;
+}
+
+body[class="wait"] a[name="page-top"][target]+div #main-content #action-area div#lock-info::after {
+    font-size: 0;
+}
+
 /* ----END---- */

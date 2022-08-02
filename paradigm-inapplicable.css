@@ -1,0 +1,445 @@
+/* Paradigm Inapplicable Theme */
+/* 2022 Wikidot Theme */
+/* By Mercuresphere, based off Ghost Record Theme by UncertaintyCrossing and Dustjacket by Woedenaz and Croquembouche */
+/* Header background: https://pixabay.com/images/id-1572988 */
+/* CC BY-SA 3.0 */
+
+@import url("https://fastly.jsdelivr.net/gh/Crimone/crimson-anemone@2.3.15/dustjacket.css");
+@import url("https://fastly.jsdelivr.net/gh/Crimone/crimson-anemone@main/components/non-savingpage.css");
+
+/* ----BEGIN---- */
+
+:root {
+
+    /* S-CSS-P Integration */
+    /* If you're making a new CSS theme, please include the following three variables at minimum. */
+    --theme-base: "nuscp";
+    /* must be either "nuscp" or "sigma9" */
+    --theme-id: "paradigm-inapplicable";
+    /* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
+    --theme-name: "Paradigm Inapplicable Theme";
+    /* set this to your theme's full name */
+
+    /* ===标准主题颜色=== */
+    --white-monochrome: 252, 252, 252;
+    --pale-gray-monochrome: 214, 245, 255;
+    --light-pale-gray-monochrome: 215, 255, 255;
+    --very-light-gray-monochrome: 220, 222, 230;
+    --light-gray-monochrome: 70, 130, 183;
+    --gray-monochrome: 0, 35, 100;
+    --dark-gray-monochrome: 10, 30, 55;
+    --gradient-header: url("https://tva1.sinaimg.cn/large/006Vtzrtly1h47w6r3x29j33uw06oahw.jpg");
+    --header-background-image-size: auto var(--header-height-on-desktop);
+    --logo-image: none;
+    --pale-accent: 136, 198, 201;
+    --bright-accent: 163, 233, 224;
+    --medium-accent: 41, 127, 128;
+    --dark-accent: 10, 30, 55;
+    --newpage-color: 41, 128, 92;
+
+    --dark-medium-accent: 3, 105, 105;
+    --pager-link-hover: var(--pale-gray-monochrome);
+}
+
+:root:lang(cn) {
+    --header-title: "THE PARADIGM YOU HAVE SEARCHED FOR IS NOT IN SERVICE";
+    --body-font: Texturina, Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+    --header-font: "Anonymous Pro", 'HanWang WeiBeiMedium-Gb5', Consolas, 'Noto Serif SC', monospace;
+    --title-font: "EB Garamond", 'HanWang WeiBeiMedium-Gb5', 'kaiti', 'Noto Serif SC', Big Caslon, Book Antiqua, Palatino Linotype, 'Noto Serif SC', Georgia, serif;
+    --UI-font: "EB Garamond", Big Caslon, Book Antiqua, Palatino Linotype, 'Noto Serif SC', Georgia, serif;
+    --mono-font: Recursive, Consolas, monaco, '仿宋', 'Noto Serif SC', monospace;
+}
+
+/* ===页眉=== */
+
+div#extra-div-1 {
+    background-position: center;
+}
+
+#header h1 a,
+#header h1 a::before,
+#header h1 a::after {
+    font-size: 1.6rem;
+}
+
+#header h1 a::before {
+    color: rgb(1, 245, 230);
+}
+
+#header h1 a::after {
+    display: none;
+}
+
+@media only screen and (min-width: 56.25rem) {
+
+    #container #header h1 a::before,
+    #container #header h1 a::after {
+        --wght: 700;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    #header h1 a,
+    #header h1 a::before,
+    #header h1 a::after {
+        font-size: 1.1rem;
+        line-height: 1.1;
+    }
+}
+
+/* ===页面元素颜色调整=== */
+
+hr {
+    height: .125rem;
+    border: 0;
+    border-top: 0.0625rem solid transparent;
+    background-color: rgba(var(--medium-accent));
+    background-image: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.fancyhr hr {
+    filter: hue-rotate(134deg) saturate(104.62%) brightness(0.5);
+    border-image-source: url("https://wanderers-library.wdfiles.com/local--files/component%3Adustjacket-theme/wl_hr.png");
+    border-image-repeat: round;
+    border-image-slice: 80 500 80 500 fill;
+    border-image-width: 10em 80em 10em 80em;
+}
+
+.fancyborder {
+    box-sizing: border-box;
+    padding: 2vw;
+    border: 2vw solid rgba(0, 0, 0, 0.5);
+    border-image: url("https://evernight-aquarium.wdfiles.com/local--files/theme%3Awanderers-sandbox/wl_border.png") 600 round;
+    border-image-width: 6;
+}
+
+#page-title::before,
+.meta-title::before,
+#page-title::after,
+.meta-title::after {
+    background-color: rgb(var(--medium-accent));
+    background-image: none;
+}
+
+#breadcrumbs a:before,
+#breadcrumbs a:visited:before,
+.pseudocrumbs a:before,
+.pseudocrumbs a:visited:before {
+    box-shadow: .0625rem .0625rem 0 0 rgba(var(--medium-accent), 1), .25rem .0625rem 0 0 rgba(255, 255, 255, .85), .25rem .0625rem 0 0 rgba(var(--medium-accent), 1), .3125rem .0625rem 0 0 rgba(var(--medium-accent), 1);
+}
+
+#main-content {
+    --tabs-hover-txt: var(--pale-gray-monochrome);
+    --tabs-selected-bg: var(--dark-medium-accent);
+    --tabs-selected-txt: var(--pale-gray-monochrome);
+    --tabs-selected-outline: var(--dark-medium-accent);
+}
+
+.yui-navset .yui-nav .selected {
+    --tabs-bg: var(--dark-medium-accent);
+}
+
+.yui-navset .yui-content,
+.yui-navset .yui-navset-top .yui-content {
+    border-color: rgb(var(--medium-accent));
+    border-top-style: none;
+}
+
+table.wiki-content-table th {
+    box-shadow: 0 0 0 0 rgb(var(--swatch-menutxt-light-color));
+}
+
+#page-content .rate-box-with-credit-button>.creditButton>p>a:after {
+    background-color: rgba(var(--medium-accent), 1);
+}
+
+textarea {
+    --MONO: 1;
+    --CASL: 0;
+    font-family: Recursive, Consolas, monaco, sans-serif;
+}
+
+/* ===链接反色效果=== */
+
+div.page-watch-options a,
+div.page-watch-options a:visited {
+    --hover-link-color: var(--dark-accent);
+}
+
+#breadcrumbs,
+.pseudocrumbs {
+    --swatch-text-secondary-color: var(--dark-accent);
+}
+
+form#edit-page-form .edit-help-34>a:active,
+form#edit-page-form .edit-help-34>a:hover,
+form#edit-page-form .edit-help-34>a:focus-within {
+    --swatch-background: var(--dark-accent);
+}
+
+#action-area a[onclick*=deleteTag]:not(.btn):active,
+#action-area a[onclick*=deleteTag]:not(.btn):hover,
+#action-area a[onclick*=deleteTag]:not(.btn):focus-within {
+    --swatch-text-secondary-color: var(--dark-accent);
+}
+
+#header {
+    --login-myaccount-hover-color: var(--dark-accent);
+    --login-myaccount-underline-color: 0, 0, 0, 0;
+    --login-myaccount-hover-bg-color: var(--bright-accent);
+}
+
+#license-area {
+    --license-link-hover-color: var(--dark-accent);
+}
+
+#action-area a.action-area-close:active,
+#action-area a.action-area-close:hover,
+#action-area a.action-area-close:focus-within {
+    --swatch-text-secondary-color: var(--dark-accent);
+}
+
+/* ===兼容性修正=== */
+
+div.earthworm div.inner,
+div.earthworm div.inner>div {
+    display: contents;
+}
+
+.pseudocrumbs p {
+    display: flex;
+}
+
+/* ===移动端修正=== */
+
+@media only screen and (max-width: 375px) {
+    #odialog-container div.owindow {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    div[id*=page-options-bottom]>a:after {
+        left: calc((2em - var(--icon-size))/2);
+    }
+}
+
+@media only screen and (max-width: 56.25rem) {
+    #search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="text"] {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    #header h1 a::before,
+    #header h1 a::after {
+        width: 95%;
+        left: calc(2.5%);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #side-bar {
+        padding-left: 0px;
+    }
+}
+
+/* ===默认收起用户信息栏和搜索栏=== */
+
+@media only screen and (min-width: 56.25rem) {
+    #search-top-box {
+        top: 2em;
+        right: 3%
+    }
+
+    #login-status {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        top: 2em;
+        right: calc(3% + var(--account-height) + .25em);
+        color: transparent;
+        pointer-events: none;
+        transition: color .2s cubic-bezier(.4, 0, .2, 1);
+        user-select: none
+    }
+
+    #login-status:active,
+    #login-status:hover {
+        -webkit-user-select: initial;
+        -moz-user-select: initial;
+        -ms-user-select: initial;
+        color: rgb(var(--login-line-divider-color));
+        pointer-events: all;
+        user-select: auto
+    }
+
+    #login-status:focus-within {
+        -webkit-user-select: initial;
+        -moz-user-select: initial;
+        -ms-user-select: initial;
+        color: rgb(var(--login-line-divider-color));
+        pointer-events: all;
+        user-select: auto
+    }
+
+    #login-status:active #account-options,
+    #login-status:hover #account-options {
+        pointer-events: all
+    }
+
+    #login-status:focus-within #account-options {
+        pointer-events: all
+    }
+
+    #login-status> :not(#account-topbutton):not([href*="account/messages"]) {
+        --clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        -webkit-clip-path: var(--clip-path);
+        clip-path: var(--clip-path);
+        opacity: 0;
+        transition: box-shadow .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1), opacity .2s cubic-bezier(.4, 0, .2, 1), -webkit-text-decoration .2s cubic-bezier(.4, 0, .2, 1), -webkit-clip-path .2s cubic-bezier(.4, 0, .2, 1);
+        transition: box-shadow .2s cubic-bezier(.4, 0, .2, 1), text-decoration .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1), clip-path .2s cubic-bezier(.4, 0, .2, 1), opacity .2s cubic-bezier(.4, 0, .2, 1);
+        transition: box-shadow .2s cubic-bezier(.4, 0, .2, 1), text-decoration .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1), clip-path .2s cubic-bezier(.4, 0, .2, 1), opacity .2s cubic-bezier(.4, 0, .2, 1), -webkit-text-decoration .2s cubic-bezier(.4, 0, .2, 1), -webkit-clip-path .2s cubic-bezier(.4, 0, .2, 1)
+    }
+
+    #login-status:active> :not(#account-topbutton):not([href*="account/messages"]),
+    #login-status:hover> :not(#account-topbutton):not([href*="account/messages"]) {
+        --clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        -webkit-clip-path: var(--clip-path);
+        clip-path: var(--clip-path);
+        opacity: 1
+    }
+
+    #login-status:focus-within> :not(#account-topbutton):not([href*="account/messages"]) {
+        --clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        -webkit-clip-path: var(--clip-path);
+        clip-path: var(--clip-path);
+        opacity: 1
+    }
+
+    #login-status #account-topbutton {
+        margin-left: 0;
+        background-color: initial;
+        pointer-events: all;
+        transition: background-color .15s cubic-bezier(.4, 0, .2, 1), -webkit-clip-path .15s cubic-bezier(.4, 0, .2, 1);
+        transition: clip-path .15s cubic-bezier(.4, 0, .2, 1), background-color .15s cubic-bezier(.4, 0, .2, 1);
+        transition: clip-path .15s cubic-bezier(.4, 0, .2, 1), background-color .15s cubic-bezier(.4, 0, .2, 1), -webkit-clip-path .15s cubic-bezier(.4, 0, .2, 1)
+    }
+
+    #login-status:hover #account-topbutton {
+        background-color: rgb(var(--login-arrow-color))
+    }
+
+    #login-status:before {
+        -webkit-mask-image: var(--user-account-mask);
+        -webkit-mask-size: calc(var(--account-height) - .5em);
+        -webkit-mask-position: center right;
+        -webkit-mask-repeat: no-repeat;
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(var(--login-mobile-icon-color), 0);
+        background-color: rgba(var(--login-mobile-icon-color), 1);
+        content: "";
+        cursor: pointer;
+        mask-image: var(--user-account-mask);
+        mask-position: center right;
+        mask-repeat: no-repeat;
+        mask-size: calc(var(--account-height) - .5em);
+        pointer-events: all;
+        transition: background-color .15s cubic-bezier(.4, 0, .2, 1)
+    }
+
+    #login-status:hover:before {
+        background-color: rgba(var(--login-mobile-icon-hover-color), 1)
+    }
+
+    #login-status:active:after,
+    #login-status:active:before,
+    #login-status:hover:after,
+    #login-status:hover:before {
+        background-color: rgba(var(--login-mobile-icon-hover-bg-color), 0);
+        cursor: auto;
+        pointer-events: none
+    }
+
+    #login-status:focus-within:after,
+    #login-status:focus-within:before {
+        background-color: rgba(var(--login-mobile-icon-hover-bg-color), 0);
+        cursor: auto;
+        pointer-events: none
+    }
+
+    #login-status #account-topbutton {
+        --clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        -webkit-clip-path: var(--clip-path);
+        background-color: rgba(var(--login-arrow-color), 0);
+        clip-path: var(--clip-path)
+    }
+
+    #login-status:active #account-topbutton,
+    #login-status:hover #account-topbutton {
+        --clip-path: polygon(30% 35%, 70% 35%, 50% 60%, 50% 60%);
+        -webkit-clip-path: var(--clip-path);
+        background-color: rgb(var(--login-arrow-color));
+        clip-path: var(--clip-path)
+    }
+
+    #login-status:focus-within #account-topbutton {
+        --clip-path: polygon(30% 35%, 70% 35%, 50% 60%, 50% 60%);
+        -webkit-clip-path: var(--clip-path);
+        background-color: rgb(var(--login-arrow-color));
+        clip-path: var(--clip-path)
+    }
+
+    #login-status #account-options {
+        margin: 0
+    }
+
+    #login-status a[href*="account/messages"] {
+        color: rgb(var(--login-myaccount-color));
+        pointer-events: all
+    }
+}
+
+/* ===修复ios设备上的显示效果=== */
+
+@supports (-webkit-touch-callout: none) {
+
+    :root:lang(cn) {
+        --header-title: "THE PARADIGM YOU HAVE SEARCHED FOR IS NOT IN SERVICE";
+        --body-font: Texturina, Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+        --header-font: "Anonymous Pro", Consolas, monospace;
+        --title-font: "EB Garamond", 'kaiti', Big Caslon, Book Antiqua, Palatino Linotype, Georgia, serif;
+        --UI-font: "EB Garamond", Big Caslon, Book Antiqua, Palatino Linotype, 'Noto Serif SC', Georgia, serif;
+        --mono-font: Recursive, Consolas, monaco, '仿宋', 'Noto Serif SC', monospace;
+    }
+
+    .fancyhr hr {
+        filter: hue-rotate(134deg) saturate(104.62%) brightness(0.5);
+        border-image-source: url("https://wanderers-library.wdfiles.com/local--files/component%3Adustjacket-theme/wl_hr.png");
+        border-image-repeat: repeat;
+        border-image-slice: 80 500 80 500 fill;
+        border-image-width: 10em 80em 10em 80em;
+    }
+
+    @media only screen and (width: 768px) {
+
+        div[id*="page-options-bottom"]:not(.page-rate-widget-box):not(#search-top-box-form)>a.btn {
+            box-shadow: none;
+        }
+
+    }
+
+}
+
+/* ----END---- */
