@@ -2134,14 +2134,14 @@ body[class="wait"] #odialog-container #owindow-1 {
 }
 
 body[class="wait"] a[name="page-top"][target]+div #main-content #action-area div#lock-info {
-    background-color: #ffcdd2;
-    border: 1px solid #e53935;
+    background-color: rgb(var(--dark-accent));
+    border: 1px solid rgb(var(--bright-accent));
 }
 
 div#lock-info {
-    font-size: 0;
-    margin: .8rem 0;
-    padding: 0.4rem .8rem;
+    font-size: 0!important;
+    margin: .8rem 0!important;
+    padding: 0.4rem .8rem!important;
 }
 
 div#lock-info::before {
@@ -2169,7 +2169,7 @@ body[class="wait"] a[name="page-top"][target]+div #main-content #action-area div
     content: '保存页面中……\A若此提示已经显示了很长时间，建议将编辑框中的内容复制到剪切板然后刷新本页重新编辑。';
     display: inline;
     font-size: .82rem;
-    color: red;
+    color: rgb(var(--bright-accent));
     white-space: pre-wrap;
 }
 
