@@ -490,7 +490,7 @@ h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 767px) {
-    #page-title {
+    .meta-title, #page-title {
         font-size: 180%;
     }
 }
@@ -784,6 +784,7 @@ so the fixed positioning (top, left, right and/or bottom) has to match */
 body {
     background-color: rgb(var(--white-monochrome));
     font-family: var(--body-font);
+    font-size: var(--base-font-size);
 }
 
 #page-content {
