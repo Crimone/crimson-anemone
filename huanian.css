@@ -1,0 +1,288 @@
+@supports(display: grid) {
+    :root {
+        /* S-CSS-P Integration */ /* If you're making a new CSS theme, please include the following three variables at minimum. */ --theme-base: "black-highlighter";
+        /* must be either "black-highlighter" or "sigma9" */
+        --theme-id: "old-money-theme";
+        /* set this to the URL of your theme's page - eg for "component:ar-theme", set it to "ar-theme" */
+        --theme-name: "Old Money Theme";
+        /* set this to your theme's full name */
+        /* Header */
+        --title: " 变轨者";
+        --subtitle: " 点燃烛火 划破夜幕";
+        --logo: url("https://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/OldMoney_Logo.png");
+        /* Standard Colors */
+        --white-monochrome: 252, 252, 252;
+        /* white */
+        --pale-gray-monochrome: 244, 244, 244;
+        /* v light gray for blockquotes and stuff */
+        --light-pale-gray-monochrome: 244, 244, 244;
+        /* very light pale gray for misc. use */
+        --very-light-gray-monochrome: 215, 215, 215;
+        --light-gray-monochrome: 215, 215, 215;
+        /* light accent gray for login status */
+        --gray-monochrome: 185, 150, 80;
+        /* gray */
+        --dark-gray-monochrome: 115, 94, 55;
+        /* dark accent gray for sidebar background */
+        --black-monochrome: 26, 25, 24;
+        /* black */
+        --pale-accent: 252, 236, 135;
+        --bright-accent: 252, 236, 135;
+        /* bright red */
+        --medium-accent: 207, 159, 45;
+        /* medium red */
+        --dark-accent: 70, 56, 33;
+        /* dark red */
+        --newpage-color: 221, 102, 17;
+        /* pale orange */
+        --swatch-primary: var(--bright-accent);
+        --swatch-primary-darker: var(--medium-accent);
+        --swatch-primary-darkest: var(--dark-accent);
+        /* Primary Text Colors */
+        --swatch-text-general: var(--swatch-text-light);
+        /* Primary Menu Colors */
+        --swatch-menubg-color: var(--black-monochrome);
+        --swatch-menutxt-general-color: var(--swatch-menutxt-light-color);
+        --swatch-border-color: var(--swatch-menubg-dark-color);
+        --sidebar-links-text: var(--swatch-menutxt-light-color);
+        /* Primary Theme Colors */
+        --swatch-background: var(--black-monochrome, 26, 25, 24);
+        /* ===SECONDARY & TERTIARY COLORS=== */
+        /* Colors for Secondary & Tertiary items like Blockquote and YUI Tabs */
+        --swatch-secondary-color: var(--swatch-menubg-dark-color);
+        --swatch-tertiary-color: var(--swatch-menubg-light-color);
+        /* Text Colors for Secondary & Tertiary items like Sidebar Headers and Top-Bar Menu Text */
+        --swatch-text-secondary-color: var(--swatch-menutxt-dark-color);
+        --swatch-text-tertiary-color: var(--swatch-menutxt-light-color);
+        /* Rating Module Colors */
+        --rating-module-button-color: var(--bright-accent);
+        --rating-module-button-plus-color: 45, 65, 25;
+        --rating-module-button-negative-color: 70, 35, 30;
+        --rating-module-button-cancel-color: 50, 45, 50;
+        --rating-module-button-credit-color: 50, 45, 50;
+        --rating-module-text-color: var(--bright-accent);
+        --rating-module-text-hover-color: var(--swatch-menutxt-light-color);
+        /* Background and Header Colors */
+        --background-gradient-color: var(--dark-accent, 70, 56, 33);
+        --header-gradient-color-bottom: var(--dark-accent);
+        --header-gradient-color-middle: var(--black-monochrome);
+        --header-gradient-color-top: var(--black-monochrome);
+        --gradient-header: linear-gradient(30deg, rgb(var(--header-gradient-color-bottom)) 0%, rgb(var(--header-gradient-color-middle)) 90%, rgb(var(--header-gradient-color-top)) 100%);
+        --scrollbar-width: 0.5rem;
+        /* header measurements */
+        --header-height-on-desktop: 5rem;
+        --header-height-on-mobile: 5rem;
+        --topbar-height-on-desktop: 5rem;
+        --topbar-height-on-mobile: 5rem;
+        --header-background-image-size: 100% var(--header-height-on-desktop);
+        scrollbar-color: rgba(var(--dark-gray-monochrome), 1) rgba(var(--black-monochrome), 1);
+        --gradient-background: linear-gradient(to bottom,rgba(var(--background-gradient-color),1) 0,rgba(var(--background-gradient-color),0) 40rem);
+    }
+
+    div#extra-div-1 {
+        background: none;
+    }
+
+    div#extrac-div-1, div#extrac-div-2 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--header-height-on-desktop);
+        padding: none;
+        pointer-events: none;
+    }
+
+    #extrac-div-1 {
+        background-image: var(--gradient-header);
+        background-size: var(--header-background-image-size) 100%;
+    }
+
+    #extrac-div-2 {
+        --mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0' y='0' baseProfile='tiny' overflow='visible' version='1.2' viewBox='0 0 100 67' xml:space='preserve'%3E%3Cg id='DecoLinesPattern'%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M66.5 17.3c-2.9.4-4.7 1.4-5.9 2.3-2.6 2-2.8 4.2-5.5 6.1-.2.2-.4.3-.7.4-2.7 1.7-6.2 1.7-8.9 0-.2-.1-.4-.3-.7-.4-2.7-2-2.9-4.1-5.5-6.1-1.1-.9-2.9-1.9-5.9-2.3'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M74.9 22.3c-4.4.6-7.2 2.2-8.9 3.6-3.9 3.2-4.3 6.6-8.3 9.7 0 0-.1 0-.1.1-4.5 3.4-10.8 3.4-15.3 0 0 0-.1 0-.1-.1-4.1-3.1-4.4-6.6-8.3-9.7-1.7-1.4-4.4-3-8.9-3.6'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M82.4 28c-5.7.8-9.3 2.9-11.5 4.6-5.1 4.1-5.5 8.6-10.8 12.6-.3.3-.7.5-1.1.7-5.4 3.6-12.5 3.6-17.9 0-.4-.2-.7-.5-1.1-.7-5.3-4-5.7-8.5-10.8-12.6-2.2-1.8-5.8-3.9-11.5-4.6m48.8-44.2c-2.9.4-4.7 1.4-5.9 2.3-2.6 2-2.8 4.2-5.5 6.1-.2.2-.4.3-.7.4-2.7 1.7-6.2 1.7-8.9 0-.2-.1-.4-.3-.7-.4-2.7-2-2.9-4.1-5.5-6.1-1.1-.9-2.9-1.9-5.9-2.3'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M74.9-11.2c-4.4.6-7.2 2.2-8.9 3.6-3.9 3.2-4.3 6.6-8.3 9.7 0 0-.1 0-.1.1-4.5 3.4-10.8 3.4-15.3 0 0 0-.1 0-.1-.1-4.1-3.1-4.4-6.6-8.3-9.7-1.7-1.4-4.4-3-8.9-3.6'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M82.4-5.5c-5.8.8-9.4 2.9-11.5 4.6-5.2 4.2-5.6 8.6-10.9 12.7-.3.3-.7.5-1.1.7-5.4 3.6-12.5 3.6-17.9 0-.4-.2-.7-.5-1.1-.7-5.3-4-5.7-8.5-10.8-12.6-2.1-1.8-5.7-3.9-11.5-4.7m48.9 56.3c-2.9.4-4.7 1.4-5.9 2.3-2.6 2-2.8 4.2-5.5 6.1-.2.2-.4.3-.7.4-2.7 1.7-6.2 1.7-8.9 0-.2-.1-.4-.3-.7-.4-2.7-2-2.9-4.1-5.5-6.1-1.1-.9-2.9-1.9-5.9-2.3'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M74.9 55.8c-4.4.6-7.2 2.2-8.9 3.6-3.9 3.2-4.3 6.6-8.3 9.7 0 0-.1 0-.1.1-4.5 3.4-10.8 3.4-15.3 0 0 0-.1 0-.1-.1-4.1-3.1-4.4-6.6-8.3-9.7-1.7-1.4-4.4-3-8.9-3.6'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M82.4 61.5c-5.7.8-9.3 2.9-11.5 4.6-5.1 4.1-5.5 8.6-10.8 12.6-.3.3-.7.5-1.1.7-5.4 3.6-12.5 3.6-17.9 0-.4-.2-.7-.5-1.1-.7-5.3-4-5.7-8.5-10.8-12.6-2.2-1.8-5.8-3.9-11.5-4.6m98.8-26.9c-2.9.4-4.7 1.4-5.9 2.3-2.6 2-2.8 4.2-5.5 6.1-.2.2-.4.3-.7.4-2.7 1.7-6.2 1.7-8.9 0-.2-.1-.4-.3-.7-.4-2.7-2-2.9-4.1-5.5-6.1-1.1-.9-2.9-1.9-5.9-2.3'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M124.9 39.6c-4.4.6-7.2 2.2-8.9 3.6-3.9 3.2-4.3 6.6-8.3 9.7 0 0-.1 0-.1.1-4.5 3.4-10.8 3.4-15.3 0 0 0-.1 0-.1-.1-4.1-3.1-4.4-6.6-8.3-9.7-1.7-1.4-4.4-3-8.9-3.6'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M132.4 45.3c-5.7.8-9.3 2.9-11.5 4.6-5.1 4.1-5.5 8.6-10.8 12.6-.3.3-.7.5-1.1.7-5.4 3.6-12.5 3.6-17.9 0-.4-.2-.7-.5-1.1-.7-5.3-4-5.7-8.5-10.8-12.6-2.2-1.8-5.8-3.9-11.5-4.6m48.8-43.7c-2.9.4-4.7 1.4-5.9 2.3-2.6 2-2.8 4.2-5.5 6.1-.2.2-.4.3-.7.4-2.7 1.7-6.2 1.7-8.9 0-.2-.1-.4-.3-.7-.4-2.7-2-2.9-4.1-5.5-6.1-1.1-.9-2.9-1.9-5.8-2.3'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M124.9 6.6c-4.4.6-7.2 2.2-8.9 3.6-3.9 3.2-4.3 6.6-8.3 9.7 0 0-.1 0-.1.1-4.5 3.4-10.8 3.4-15.3 0 0 0-.1 0-.1-.1-4.1-3.1-4.4-6.6-8.3-9.7-1.7-1.4-4.4-3-8.9-3.6'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M132.4 12.3c-5.7.8-9.3 2.9-11.5 4.6-5.1 4.1-5.5 8.6-10.8 12.6-.3.3-.7.5-1.1.7-5.4 3.6-12.5 3.6-17.9 0-.4-.2-.7-.5-1.1-.7-5.3-4-5.7-8.5-10.8-12.6-2.2-1.8-5.8-3.9-11.5-4.6M16.5 34.6c-2.9.4-4.7 1.4-5.9 2.3C8 38.8 7.8 41 5.1 43c-.2.2-.4.3-.7.4-2.7 1.7-6.2 1.7-8.9 0-.2-.1-.4-.3-.7-.4-2.7-2-2.9-4.1-5.5-6.1-1.1-.9-2.9-1.9-5.9-2.3'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M24.9 39.6c-4.4.6-7.2 2.2-8.9 3.6-3.9 3.2-4.3 6.6-8.3 9.7 0 0-.1 0-.1.1-4.5 3.4-10.8 3.4-15.3 0 0 0-.1 0-.1-.1-4.1-3.1-4.4-6.6-8.3-9.7-1.7-1.4-4.4-3-8.9-3.6'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M32.4 45.3c-5.7.8-9.3 2.9-11.5 4.6-5.2 4.1-5.6 8.6-10.9 12.7-.3.3-.7.5-1.1.7-5.4 3.6-12.5 3.6-17.9 0-.4-.2-.7-.5-1.1-.7-5.3-4-5.7-8.5-10.8-12.6-2.2-1.8-5.8-3.9-11.5-4.6M16.5 1.6c-2.9.4-4.7 1.4-5.9 2.2C8 5.8 7.8 8 5.1 10c-.2.2-.4.3-.7.4-2.7 1.7-6.2 1.7-8.9 0-.2-.1-.4-.3-.7-.4-2.6-2-2.8-4.2-5.4-6.2-1.2-.8-3-1.8-5.9-2.2'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M24.9 6.6c-4.4.6-7.2 2.2-8.9 3.6-3.9 3.2-4.3 6.6-8.3 9.7 0 0-.1 0-.1.1-4.5 3.4-10.8 3.4-15.3 0 0 0-.1 0-.1-.1-4.1-3.1-4.4-6.6-8.3-9.7-1.7-1.4-4.4-3-8.9-3.6'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M32.4 12.3c-5.7.8-9.3 2.9-11.5 4.6-5.2 4.1-5.6 8.6-10.9 12.7-.3.3-.7.5-1.1.7-5.4 3.6-12.5 3.6-17.9 0-.4-.2-.7-.5-1.1-.7-5.3-4-5.7-8.5-10.8-12.6-2.2-1.8-5.8-3.9-11.5-4.6m98.9-28.6c-2.9.4-4.7 1.4-5.9 2.3-2.6 2-2.8 4.2-5.5 6.1-.2.2-.4.3-.7.4-2.7 1.7-6.2 1.7-8.9 0-.2-.1-.4-.3-.7-.4-2.7-2-2.9-4.1-5.5-6.1-1.1-.9-2.9-1.9-5.9-2.3'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M74.9-11.2c-4.4.6-7.2 2.2-8.9 3.6-3.9 3.2-4.3 6.6-8.3 9.7 0 0-.1 0-.1.1-4.5 3.4-10.8 3.4-15.3 0 0 0-.1 0-.1-.1-4.1-3.1-4.4-6.6-8.3-9.7-1.7-1.4-4.4-3-8.9-3.6'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M82.4-5.5c-5.8.8-9.4 2.9-11.5 4.6-5.2 4.2-5.6 8.6-10.9 12.7-.3.3-.7.5-1.1.7-5.4 3.6-12.5 3.6-17.9 0-.4-.2-.7-.5-1.1-.7-5.3-4-5.7-8.5-10.8-12.6-2.1-1.8-5.7-3.9-11.5-4.7'/%3E%3C/g%3E%3C/svg%3E");
+        background-image: linear-gradient(45deg, rgba(var(--swatch-primary), 0.4) 0%, rgba(var(--swatch-primary-darker), 0.1) 30%, rgba(var(--header-gradient-color-top)) 100%);
+        background-size: var(--header-background-image-size) 100%;
+        -webkit-mask-image: var(--mask-image);
+        mask-image: var(--mask-image);
+        -webkit-mask-size: 4rem;
+        mask-size: 4rem
+    }
+
+    div#extra-div-3 {
+        --mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0' y='0' baseProfile='tiny' overflow='visible' version='1.2' viewBox='0 0 100 67' xml:space='preserve'%3E%3Cg id='DecoLinesPattern'%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M66.5 17.3c-2.9.4-4.7 1.4-5.9 2.3-2.6 2-2.8 4.2-5.5 6.1-.2.2-.4.3-.7.4-2.7 1.7-6.2 1.7-8.9 0-.2-.1-.4-.3-.7-.4-2.7-2-2.9-4.1-5.5-6.1-1.1-.9-2.9-1.9-5.9-2.3'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M74.9 22.3c-4.4.6-7.2 2.2-8.9 3.6-3.9 3.2-4.3 6.6-8.3 9.7 0 0-.1 0-.1.1-4.5 3.4-10.8 3.4-15.3 0 0 0-.1 0-.1-.1-4.1-3.1-4.4-6.6-8.3-9.7-1.7-1.4-4.4-3-8.9-3.6'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M82.4 28c-5.7.8-9.3 2.9-11.5 4.6-5.1 4.1-5.5 8.6-10.8 12.6-.3.3-.7.5-1.1.7-5.4 3.6-12.5 3.6-17.9 0-.4-.2-.7-.5-1.1-.7-5.3-4-5.7-8.5-10.8-12.6-2.2-1.8-5.8-3.9-11.5-4.6m48.8-44.2c-2.9.4-4.7 1.4-5.9 2.3-2.6 2-2.8 4.2-5.5 6.1-.2.2-.4.3-.7.4-2.7 1.7-6.2 1.7-8.9 0-.2-.1-.4-.3-.7-.4-2.7-2-2.9-4.1-5.5-6.1-1.1-.9-2.9-1.9-5.9-2.3'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M74.9-11.2c-4.4.6-7.2 2.2-8.9 3.6-3.9 3.2-4.3 6.6-8.3 9.7 0 0-.1 0-.1.1-4.5 3.4-10.8 3.4-15.3 0 0 0-.1 0-.1-.1-4.1-3.1-4.4-6.6-8.3-9.7-1.7-1.4-4.4-3-8.9-3.6'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M82.4-5.5c-5.8.8-9.4 2.9-11.5 4.6-5.2 4.2-5.6 8.6-10.9 12.7-.3.3-.7.5-1.1.7-5.4 3.6-12.5 3.6-17.9 0-.4-.2-.7-.5-1.1-.7-5.3-4-5.7-8.5-10.8-12.6-2.1-1.8-5.7-3.9-11.5-4.7m48.9 56.3c-2.9.4-4.7 1.4-5.9 2.3-2.6 2-2.8 4.2-5.5 6.1-.2.2-.4.3-.7.4-2.7 1.7-6.2 1.7-8.9 0-.2-.1-.4-.3-.7-.4-2.7-2-2.9-4.1-5.5-6.1-1.1-.9-2.9-1.9-5.9-2.3'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M74.9 55.8c-4.4.6-7.2 2.2-8.9 3.6-3.9 3.2-4.3 6.6-8.3 9.7 0 0-.1 0-.1.1-4.5 3.4-10.8 3.4-15.3 0 0 0-.1 0-.1-.1-4.1-3.1-4.4-6.6-8.3-9.7-1.7-1.4-4.4-3-8.9-3.6'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M82.4 61.5c-5.7.8-9.3 2.9-11.5 4.6-5.1 4.1-5.5 8.6-10.8 12.6-.3.3-.7.5-1.1.7-5.4 3.6-12.5 3.6-17.9 0-.4-.2-.7-.5-1.1-.7-5.3-4-5.7-8.5-10.8-12.6-2.2-1.8-5.8-3.9-11.5-4.6m98.8-26.9c-2.9.4-4.7 1.4-5.9 2.3-2.6 2-2.8 4.2-5.5 6.1-.2.2-.4.3-.7.4-2.7 1.7-6.2 1.7-8.9 0-.2-.1-.4-.3-.7-.4-2.7-2-2.9-4.1-5.5-6.1-1.1-.9-2.9-1.9-5.9-2.3'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M124.9 39.6c-4.4.6-7.2 2.2-8.9 3.6-3.9 3.2-4.3 6.6-8.3 9.7 0 0-.1 0-.1.1-4.5 3.4-10.8 3.4-15.3 0 0 0-.1 0-.1-.1-4.1-3.1-4.4-6.6-8.3-9.7-1.7-1.4-4.4-3-8.9-3.6'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M132.4 45.3c-5.7.8-9.3 2.9-11.5 4.6-5.1 4.1-5.5 8.6-10.8 12.6-.3.3-.7.5-1.1.7-5.4 3.6-12.5 3.6-17.9 0-.4-.2-.7-.5-1.1-.7-5.3-4-5.7-8.5-10.8-12.6-2.2-1.8-5.8-3.9-11.5-4.6m48.8-43.7c-2.9.4-4.7 1.4-5.9 2.3-2.6 2-2.8 4.2-5.5 6.1-.2.2-.4.3-.7.4-2.7 1.7-6.2 1.7-8.9 0-.2-.1-.4-.3-.7-.4-2.7-2-2.9-4.1-5.5-6.1-1.1-.9-2.9-1.9-5.8-2.3'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M124.9 6.6c-4.4.6-7.2 2.2-8.9 3.6-3.9 3.2-4.3 6.6-8.3 9.7 0 0-.1 0-.1.1-4.5 3.4-10.8 3.4-15.3 0 0 0-.1 0-.1-.1-4.1-3.1-4.4-6.6-8.3-9.7-1.7-1.4-4.4-3-8.9-3.6'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M132.4 12.3c-5.7.8-9.3 2.9-11.5 4.6-5.1 4.1-5.5 8.6-10.8 12.6-.3.3-.7.5-1.1.7-5.4 3.6-12.5 3.6-17.9 0-.4-.2-.7-.5-1.1-.7-5.3-4-5.7-8.5-10.8-12.6-2.2-1.8-5.8-3.9-11.5-4.6M16.5 34.6c-2.9.4-4.7 1.4-5.9 2.3C8 38.8 7.8 41 5.1 43c-.2.2-.4.3-.7.4-2.7 1.7-6.2 1.7-8.9 0-.2-.1-.4-.3-.7-.4-2.7-2-2.9-4.1-5.5-6.1-1.1-.9-2.9-1.9-5.9-2.3'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M24.9 39.6c-4.4.6-7.2 2.2-8.9 3.6-3.9 3.2-4.3 6.6-8.3 9.7 0 0-.1 0-.1.1-4.5 3.4-10.8 3.4-15.3 0 0 0-.1 0-.1-.1-4.1-3.1-4.4-6.6-8.3-9.7-1.7-1.4-4.4-3-8.9-3.6'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M32.4 45.3c-5.7.8-9.3 2.9-11.5 4.6-5.2 4.1-5.6 8.6-10.9 12.7-.3.3-.7.5-1.1.7-5.4 3.6-12.5 3.6-17.9 0-.4-.2-.7-.5-1.1-.7-5.3-4-5.7-8.5-10.8-12.6-2.2-1.8-5.8-3.9-11.5-4.6M16.5 1.6c-2.9.4-4.7 1.4-5.9 2.2C8 5.8 7.8 8 5.1 10c-.2.2-.4.3-.7.4-2.7 1.7-6.2 1.7-8.9 0-.2-.1-.4-.3-.7-.4-2.6-2-2.8-4.2-5.4-6.2-1.2-.8-3-1.8-5.9-2.2'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M24.9 6.6c-4.4.6-7.2 2.2-8.9 3.6-3.9 3.2-4.3 6.6-8.3 9.7 0 0-.1 0-.1.1-4.5 3.4-10.8 3.4-15.3 0 0 0-.1 0-.1-.1-4.1-3.1-4.4-6.6-8.3-9.7-1.7-1.4-4.4-3-8.9-3.6'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M32.4 12.3c-5.7.8-9.3 2.9-11.5 4.6-5.2 4.1-5.6 8.6-10.9 12.7-.3.3-.7.5-1.1.7-5.4 3.6-12.5 3.6-17.9 0-.4-.2-.7-.5-1.1-.7-5.3-4-5.7-8.5-10.8-12.6-2.2-1.8-5.8-3.9-11.5-4.6m98.9-28.6c-2.9.4-4.7 1.4-5.9 2.3-2.6 2-2.8 4.2-5.5 6.1-.2.2-.4.3-.7.4-2.7 1.7-6.2 1.7-8.9 0-.2-.1-.4-.3-.7-.4-2.7-2-2.9-4.1-5.5-6.1-1.1-.9-2.9-1.9-5.9-2.3'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M74.9-11.2c-4.4.6-7.2 2.2-8.9 3.6-3.9 3.2-4.3 6.6-8.3 9.7 0 0-.1 0-.1.1-4.5 3.4-10.8 3.4-15.3 0 0 0-.1 0-.1-.1-4.1-3.1-4.4-6.6-8.3-9.7-1.7-1.4-4.4-3-8.9-3.6'/%3E%3Cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='M82.4-5.5c-5.8.8-9.4 2.9-11.5 4.6-5.2 4.2-5.6 8.6-10.9 12.7-.3.3-.7.5-1.1.7-5.4 3.6-12.5 3.6-17.9 0-.4-.2-.7-.5-1.1-.7-5.3-4-5.7-8.5-10.8-12.6-2.1-1.8-5.7-3.9-11.5-4.7'/%3E%3C/g%3E%3C/svg%3E");
+        position: fixed;
+        z-index: -1;
+        top: 5rem;
+        left: 0;
+        width: 100%;
+        height: 40rem;
+        pointer-events: none;
+        -webkit-mask-image: var(--mask-image);
+        mask-image: var(--mask-image);
+        -webkit-mask-size: 3rem;
+        mask-size: 3rem;
+    }
+
+    div#extra-div-3::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40rem;
+        background-attachment: fixed;
+        background-image: linear-gradient(100deg, rgba(var(--swatch-primary), 0.2) 0%, rgba(var(--swatch-primary-darkest), 1) 30%, rgba(var(--swatch-primary-darkest), 1) 100%);
+        background-size: 100vw 40rem;
+        -webkit-mask-image: var(--gradient-background);
+        mask-image: var(--gradient-background);
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40rem;
+        background-image: var(--gradient-background);
+    ; background-size: 100vw 40rem;
+        -webkit-mask-image: var(--gradient-background);
+        mask-image: var(--gradient-background);
+    }
+
+    #page-title, .meta-title, h1, h2, h3, h4, h5, h6 {
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-color: rgb(var(--swatch-primary-darker));
+        background-image: url("https://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/goldfoil.png");
+        background-size: cover;
+        background-blend-mode: hard-light;
+        -webkit-text-fill-color: transparent;
+    }
+
+    hr {
+        display: flex;
+        position: relative;
+        height: 0.35rem;
+        border-top: none;
+        background: rgba(0, 0, 0, 0);
+    }
+
+    hr::before {
+        content: " ";
+        position: absolute;
+        top: 0.1125rem;
+        left: 0;
+        width: 100%;
+        height: 0.125rem;
+        border-top: none;
+        background: linear-gradient(10deg, rgba(var(--bright-accent), 0.15) 0%, rgba(var(--bright-accent), 1) 50%, rgba(var(--bright-accent), 0.15) 100%);
+        background-position: center center;
+        -webkit-filter: blur(0.04rem);
+        filter: blur(0.04rem);
+    }
+
+    hr::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 10%;
+        height: 0.35rem;
+        transform: translateX(-50%);
+        background-image: url("https://scp-wiki.wdfiles.com/local--files/theme%3Aold-money-theme/OldMoney_Divider.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .yui-navset .yui-nav a:hover, .yui-navset .yui-nav a:focus {
+        background-color: rgb(var(--medium-accent));
+    }
+
+    .yui-navset .yui-nav .selected a:focus, .yui-navset .yui-nav .selected a:active {
+        color: black;
+        background-color: rgb(var(--bright-accent));
+    }
+
+    .yui-navset .yui-nav .selected, .yui-navset .yui-navset-top .yui-nav .selected {
+        color: black;
+        background-color: rgb(var(--bright-accent));
+    }
+
+    .yui-navset .yui-nav .selected a {
+        color: black;
+    }
+
+    .scp-image-block img, .scp-image-block .scp-image-caption {
+        outline: solid 1px rgb(var(--bright-accent));
+    }
+
+    #side-bar .side-block {
+        background: linear-gradient( 180deg , rgba(10, 10, 10, 1) 0%, rgb(var(--dark-gray-monochrome)) 100%);
+        border: solid 2px rgb(var(--dark-gray-monochrome));
+    }
+
+    #side-bar .side-block.resources {
+        background: linear-gradient( 180deg , rgba(10, 10, 10, 1) 0%, rgb(var(--dark-gray-monochrome)) 100%) !important;
+        border: solid 2px rgb(var(--dark-gray-monochrome));
+    }
+
+    #side-bar .side-block.media {
+        background-color: rgb(5 5 5) !important;
+        border-bottom: solid 2px rgb(10, 10, 10);
+        border-top: solid 2px rgb(10 10 10);
+    }
+
+    a {
+        color: rgb(var(--bright-accent));
+    }
+
+    a, a:visited {
+        -webkit-text-decoration: underline .09375em;
+        -webkit-text-decoration-color: transparent;
+        text-decoration: underline .09375em;
+        text-decoration-color: transparent;
+        transition: text-decoration-color .15s cubic-bezier(.4, 0, .2, 1), color .15s cubic-bezier(.4, 0, .2, 1), -webkit-text-decoration-color .15s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    a:visited {
+        color: rgb(var(--medium-accent));
+    }
+
+    a, a.newpage {
+        background: transparent;
+    }
+
+    a.newpage {
+        color: rgb(var(--newpage-color));
+    }
+
+    a:active, a:hover {
+        -webkit-text-decoration: underline .09375em;
+        -webkit-text-decoration-color: currentColor;
+        background-color: initial;
+        color: rgb(var(--dark-gray-monochrome));
+        text-decoration: underline .09375em;
+        text-decoration-color: initial;
+        transition: text-decoration-color .15s cubic-bezier(.4, 0, .2, 1), color .15s cubic-bezier(.4, 0, .2, 1), -webkit-text-decoration-color .15s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    a:focus-within {
+        -webkit-text-decoration: underline .09375em;
+        -webkit-text-decoration-color: currentColor;
+        background-color: initial;
+        color: rgb(var(--dark-gray-monochrome));
+        text-decoration: underline .09375em;
+        text-decoration-color: initial;
+        transition: text-decoration-color .15s cubic-bezier(.4, 0, .2, 1), color .15s cubic-bezier(.4, 0, .2, 1), -webkit-text-decoration-color .15s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .modalbox {
+        background: linear-gradient(rgb(var(--dark-accent)) 51px,rgb(var(--dark-accent)) 51px,rgb(var(--dark-gray-monochrome))) !important;
+    }
+
+    #search-top-box-form>input[type=submit], #search-top-box-form>input[type=submit]:hover, #search-top-box-form>input[type=submit]:focus, #search-top-box-form>input[type=submit]:target {
+        margin-top: 0;
+    }
+}
