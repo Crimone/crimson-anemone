@@ -1,12 +1,3 @@
-/* source: http://ah-sandbox.wikidot.com/component:collapsible-sidebar-x1 */
-
-@import url("components/collapsible-sidebar.css");
-
-@import url("https://scp-wiki.wdfiles.com/local--code/component:betterfootnotes/1");
-
-@import url('https://scp-wiki.wdfiles.com/local--code/component%3Aacs-animation/1');
-
-
 /*
 
     BASALT Theme
@@ -189,7 +180,7 @@ body {
     background-color: #F4F4F4;
 }
 
-#top-bar ul li>a {
+#top-bar ul li > a {
     border: none;
 }
 
@@ -208,18 +199,18 @@ body {
     border: none;
 }
 
-#top-bar ul li>a {
+#top-bar ul li > a {
     transition-duration: 0.3s;
     transition-property: transform;
     transform: translateZ(0);
 }
 
-#top-bar ul li>a:hover {
+#top-bar ul li > a:hover {
     transform: translate(0px, -3px);
     border: none;
 }
 
-#top-bar ul li ul li>a:hover {
+#top-bar ul li ul li > a:hover {
     animation: none;
 }
 
@@ -298,10 +289,10 @@ div#search-top-box {
     display: none;
 }
 
-#search-top-box-form>input[type=submit],
-#search-top-box-form>input[type=submit]:hover,
-#search-top-box-form>input[type=submit]:focus,
-#search-top-box-form>input[type=submit]:target {
+#search-top-box-form > input[type=submit],
+#search-top-box-form > input[type=submit]:hover,
+#search-top-box-form > input[type=submit]:focus,
+#search-top-box-form > input[type=submit]:target {
     background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22%23ddd%22%20d%3D%22M505%20442.7L405.3%20343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3%2044-79.7%2044-128C416%2093.1%20322.9%200%20208%200S0%2093.1%200%20208s93.1%20208%20208%20208c48.3%200%2092.7-16.4%20128-44v16.3c0%206.4%202.5%2012.5%207%2017l99.7%2099.7c9.4%209.4%2024.6%209.4%2033.9%200l28.3-28.3c9.4-9.4%209.4-24.6.1-34zM208%20336c-70.7%200-128-57.2-128-128%200-70.7%2057.2-128%20128-128%2070.7%200%20128%2057.2%20128%20128%200%2070.7-57.2%20128-128%20128z%22%2F%3E%3C%2Fsvg%3E") 50%/0.8rem no-repeat, #000 !important;
     border: none;
     border-radius: 30%;
@@ -346,7 +337,7 @@ div#search-top-box {
 
 #side-bar {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    background: linear-gradient( 0deg, rgba(255, 255, 255, 1) 87%, rgba(250, 250, 250, 1) 100%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 87%, rgba(250, 250, 250, 1) 100%);
     text-transform: uppercase;
     font-family: 'Work Sans', sans-serif;
     font-weight: 400 !important;
@@ -456,7 +447,7 @@ yui-navset .yui-nav a:active {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
-.yui-navset .yui-content>div {
+.yui-navset .yui-content > div {
     display: block;
     top: 0;
     overflow: hidden;
@@ -471,7 +462,7 @@ yui-navset .yui-nav a:active {
 /* Tab animation by Croquembouche */
 /*---------------------------------------------*/
 
-#page-content .yui-navset .yui-content>div[style*="none"] {
+#page-content .yui-navset .yui-content > div[style*="none"] {
     display: block !important;
     flex: 0;
     max-height: 0;
@@ -482,7 +473,7 @@ yui-navset .yui-nav a:active {
     animation: tab-disappear 0.5s ease-in-out 0s 1 both;
 }
 
-#page-content .yui-navset .yui-content>div[style*="block"] {
+#page-content .yui-navset .yui-content > div[style*="block"] {
     display: block !important;
     flex: 1;
     max-height: 9999rem;
@@ -560,7 +551,7 @@ h6 {
     color: black;
 }
 
-.top-left-box>.item {
+.top-left-box > .item {
     display: none;
 }
 
@@ -724,7 +715,7 @@ hr {
     word-break: break-word;
 }
 
-.raisa_memo>p:nth-child(1)::before {
+.raisa_memo > p:nth-child(1)::before {
     content: "来自记录与信息安全管理部的通知\00000a";
     font-family: 'Work Sans', sans-serif;
     font-weight: 900;
@@ -759,7 +750,7 @@ hr {
     word-break: break-word;
 }
 
-.classification_memo>p:nth-child(1)::before {
+.classification_memo > p:nth-child(1)::before {
     content: "分级委员会备忘录\00000a";
     font-family: 'Work Sans', sans-serif;
     font-weight: 900;
@@ -794,7 +785,7 @@ hr {
     word-break: break-word;
 }
 
-.ettra_memo>p:nth-child(1)::before {
+.ettra_memo > p:nth-child(1)::before {
     content: "来自潜在威胁战术响应局的通知\00000a";
     font-family: 'Work Sans', sans-serif;
     font-weight: 900;
@@ -829,7 +820,7 @@ hr {
     word-break: break-word;
 }
 
-.ethics_memo>p:nth-child(1)::before {
+.ethics_memo > p:nth-child(1)::before {
     content: "伦理委员会备忘录\00000a";
     font-family: 'Work Sans', sans-serif;
     font-weight: 900;
@@ -865,7 +856,7 @@ hr {
     word-break: break-word;
 }
 
-.temporal_memo>p:nth-child(1)::before {
+.temporal_memo > p:nth-child(1)::before {
     content: "时间异常部门\00000a";
     font-family: 'Work Sans', sans-serif;
     font-weight: 900;
@@ -900,7 +891,7 @@ hr {
     word-break: break-word;
 }
 
-.overwatch_memo>p:nth-child(1)::before {
+.overwatch_memo > p:nth-child(1)::before {
     content: "监督者议会\00000a";
     font-family: 'Work Sans', sans-serif;
     font-weight: 900;
@@ -935,7 +926,7 @@ hr {
     word-break: break-word;
 }
 
-.miscomm_memo>p:nth-child(1)::before {
+.miscomm_memo > p:nth-child(1)::before {
     content: "来自误传部门的通知\00000a";
     font-family: 'Work Sans', sans-serif;
     font-weight: 900;
@@ -1286,6 +1277,7 @@ a.collapsible-block-link {
         width: calc(100% - 4.4rem);
         max-width: calc(100% - 4.4rem);
     }
+
     #main-content {
         max-width: 95%;
     }
@@ -1303,15 +1295,19 @@ a.collapsible-block-link {
         top: 3.2rem;
         left: 7.8rem;
     }
+
     #extra-div-1::before {
         top: 0.3rem;
     }
+
     #extra-div-2::before {
         top: 1.9rem;
     }
+
     #u-header-link {
         height: 2.5rem;
     }
+
     .document,
     .darkdocument {
         width: 95%;
@@ -1332,16 +1328,20 @@ a.collapsible-block-link {
     .logo {
         display: none;
     }
+
     #top-bar {
         left: 3.6rem;
     }
+
     #extra-div-1::before,
     #extra-div-2::before {
         left: 4.2rem;
     }
+
     #u-header-link {
         left: 4rem;
     }
+
     .document, .darkdocument {
         width: auto;
     }
@@ -1358,13 +1358,16 @@ a.collapsible-block-link {
         font-size: 23.45px;
         top: 0.5rem;
     }
+
     #extra-div-2::before {
         font-size: 1em;
         top: 2.1rem;
     }
+
     #u-header-link {
         width: 13.5rem;
     }
+
     #login-status {
         right: 1.8rem;
     }
@@ -1426,24 +1429,24 @@ div.buttons input, input.button, button, file, a.button {
     display: none;
 }
 
-#who-rated-page-area>div {
+#who-rated-page-area > div {
     column-count: 4;
 }
 
 @media (max-width: 900px) {
-    #who-rated-page-area>div {
+    #who-rated-page-area > div {
         column-count: 3;
     }
 }
 
 @media (max-width: 700px) {
-    #who-rated-page-area>div {
+    #who-rated-page-area > div {
         column-count: 2;
     }
 }
 
 @media (max-width: 540px) {
-    #who-rated-page-area>div {
+    #who-rated-page-area > div {
         column-count: 1;
     }
 }
@@ -1553,39 +1556,39 @@ div.buttons input, input.button, button, file, a.button {
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 100%);
 }
 
-#owindow-1>div.title.modal-header {
+#owindow-1 > div.title.modal-header {
     font-family: 'Work Sans', sans-serif;
     text-transform: uppercase;
     font-size: 90%;
     cursor: default;
 }
 
-#owindow-1>div.content.modal-body td.active>b {
+#owindow-1 > div.content.modal-body td.active > b {
     font-family: 'Work Sans', sans-serif;
     color: rgb(100, 100, 100);
 }
 
-#owindow-1>div.content.modal-body>table {
+#owindow-1 > div.content.modal-body > table {
     max-height: 10rem;
     overflow: auto;
     display: block;
 }
 
-#owindow-1>div.content.modal-body>div {
+#owindow-1 > div.content.modal-body > div {
     margin-top: 1.5rem !important;
     border-top: solid 0.2rem rgb(210, 210, 210);
     padding-top: 1rem;
 }
 
-#owindow-1>div.content.modal-body>div>div>a {
+#owindow-1 > div.content.modal-body > div > div > a {
     background: #870000;
 }
 
-#owindow-1>div.content.modal-body>div>div>a:hover {
+#owindow-1 > div.content.modal-body > div > div > a:hover {
     background: #470000;
 }
 
-#owindow-1>div.content.modal-body>img {
+#owindow-1 > div.content.modal-body > img {
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.3));
     padding: 0px 0px 0px 0px !important;
     background: none;
@@ -1614,13 +1617,13 @@ div.buttons input, input.button, button, file, a.button {
     color: #191919;
 }
 
-#edit-page-form>table.edit-page-bottomtable>tbody>tr>td:nth-child(1)>div.sub,
-#edit-page-form>table.form>tbody>tr>td:nth-child(1) {
+#edit-page-form > table.edit-page-bottomtable > tbody > tr > td:nth-child(1) > div.sub,
+#edit-page-form > table.form > tbody > tr > td:nth-child(1) {
     font-family: 'Work Sans', sans-serif;
     font-weight: 500;
 }
 
-#edit-page-form>table.edit-page-bottomtable>tbody>tr>td:nth-child(1)>div:nth-child(1) {
+#edit-page-form > table.edit-page-bottomtable > tbody > tr > td:nth-child(1) > div:nth-child(1) {
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
 }
@@ -1633,7 +1636,7 @@ div.buttons input, input.button, button, file, a.button {
     display: block;
     border-radius: 2px;
     filter: invert(1), hue-rotate(180deg);
-    filter: invert(1) hue-rotate( 180deg);
+    filter: invert(1) hue-rotate(180deg);
 }
 
 .wd-editor-toolbar-panel {
@@ -1703,13 +1706,13 @@ textarea {
 }
 
 form,
-#action-area>p,
+#action-area > p,
 table.page-files td span {
     font-family: 'Work Sans', sans-serif;
 }
 
-#action-area>table>thead>tr,
-#revision-list>table>tbody>tr:nth-child(1) {
+#action-area > table > thead > tr,
+#revision-list > table > tbody > tr:nth-child(1) {
     font-family: 'Work Sans', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
@@ -1738,12 +1741,12 @@ a.btn.btn-default.button.button-no\,-cancel::first-letter,
 }
 
 .button-bar.modal-footer a.btn.btn-danger,
-#owindow-1>div.content.modal-body>div>div>a {
+#owindow-1 > div.content.modal-body > div > div > a {
     float: right !important;
     margin-top: -0.73rem;
 }
 
-td:nth-child(1)>a {
+td:nth-child(1) > a {
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
 }
@@ -1755,14 +1758,14 @@ td:nth-child(1)>a {
 a.btn.btn-danger,
 a.btn.btn-primary,
 .btn-small,
-#owindow-1>div.button-bar.modal-footer>a,
+#owindow-1 > div.button-bar.modal-footer > a,
 #edit-cancel-button,
 #edit-diff-button,
 #edit-preview-button,
 #edit-save-draft-button,
 #edit-save-continue-button,
 #edit-save-button,
-#owindow-1>div.content.modal-body>div>a.btn.btn-default {
+#owindow-1 > div.content.modal-body > div > a.btn.btn-default {
     font-family: 'Work Sans', sans-serif;
     font-weight: 600 !important;
     font-size: 0.75rem;
@@ -1786,14 +1789,14 @@ a.collapsible-block-link:hover,
 a.btn.btn-danger:hover,
 a.btn.btn-primary:hover,
 .btn-small:hover,
-#owindow-1>div.button-bar.modal-footer>a:hover,
+#owindow-1 > div.button-bar.modal-footer > a:hover,
 #edit-cancel-button:hover,
 #edit-diff-button:hover,
 #edit-preview-button:hover,
 #edit-save-draft-button:hover,
 #edit-save-continue-button:hover,
 #edit-save-button:hover,
-#owindow-1>div.content.modal-body>div>a.btn.btn-default:hover {
+#owindow-1 > div.content.modal-body > div > a.btn.btn-default:hover {
     text-decoration: none;
     background: rgb(45, 45, 45);
 }
@@ -1936,10 +1939,11 @@ tt {
 }
 
 /* Anendlessusername's invaluable correction of the ACS octagon! */
-#page-content .quadrants>div {
+#page-content .quadrants > div {
     top: 2.25%;
     left: 18.5%;
 }
+
 /* WHEN YOU SEE IT... */
 
 .licensebox .collapsible-block-link,
@@ -1972,7 +1976,7 @@ body {
 
 #extra-div-1 {
     background: rgb(35, 35, 35);
-    background: linear-gradient( 180deg, rgb(10 10 10) 0%, rgba(35, 35, 35, 1) 100%);
+    background: linear-gradient(180deg, rgb(10 10 10) 0%, rgba(35, 35, 35, 1) 100%);
 }
 
 #extra-div-1::before,
@@ -1989,10 +1993,10 @@ body {
     border: 1px solid grey;
 }
 
-#search-top-box-form>input[type=submit],
-#search-top-box-form>input[type=submit]:hover,
-#search-top-box-form>input[type=submit]:focus,
-#search-top-box-form>input[type=submit]:target {
+#search-top-box-form > input[type=submit],
+#search-top-box-form > input[type=submit]:hover,
+#search-top-box-form > input[type=submit]:focus,
+#search-top-box-form > input[type=submit]:target {
     background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22%23ddd%22%20d%3D%22M505%20442.7L405.3%20343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3%2044-79.7%2044-128C416%2093.1%20322.9%200%20208%200S0%2093.1%200%20208s93.1%20208%20208%20208c48.3%200%2092.7-16.4%20128-44v16.3c0%206.4%202.5%2012.5%207%2017l99.7%2099.7c9.4%209.4%2024.6%209.4%2033.9%200l28.3-28.3c9.4-9.4%209.4-24.6.1-34zM208%20336c-70.7%200-128-57.2-128-128%200-70.7%2057.2-128%20128-128%2070.7%200%20128%2057.2%20128%20128%200%2070.7-57.2%20128-128%20128z%22%2F%3E%3C%2Fsvg%3E") 50%/0.8rem no-repeat, transparent !important;
 }
 
@@ -2005,7 +2009,7 @@ body {
 }
 
 #side-bar {
-    background: linear-gradient( 0deg, rgba(20, 20, 20, 1) 87%, rgba(5, 5, 5, 1) 100%);
+    background: linear-gradient(0deg, rgba(20, 20, 20, 1) 87%, rgba(5, 5, 5, 1) 100%);
 }
 
 #side-bar::before {
@@ -2026,7 +2030,7 @@ body {
 }
 
 #side-bar .side-block {
-    background: linear-gradient( 180deg, rgba(25, 25, 25, 1) 0%, rgba(10, 10, 10, 1) 100%);
+    background: linear-gradient(180deg, rgba(25, 25, 25, 1) 0%, rgba(10, 10, 10, 1) 100%);
     box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.7);
 }
 
@@ -2141,7 +2145,7 @@ h6 {
     -webkit-filter: invert(100%);
 }
 
-#action-area > p:nth-child(5) > a  {
+#action-area > p:nth-child(5) > a {
     border: solid 1px grey;
 }
 
@@ -2195,15 +2199,15 @@ input.text {
     border: solid 0.15rem #080808;
 }
 
-#owindow-1>div.title.modal-header {
+#owindow-1 > div.title.modal-header {
     background: rgb(6, 6, 6);
 }
 
-#owindow-1>div.content.modal-body>table {
+#owindow-1 > div.content.modal-body > table {
     border-right: solid 2px #292929;
 }
 
-#owindow-1>div.content.modal-body>div {
+#owindow-1 > div.content.modal-body > div {
     border-top: solid 0.2rem rgb(19 19 19);
 }
 
@@ -2256,14 +2260,14 @@ div.blockquote,
 a.btn.btn-danger,
 a.btn.btn-primary,
 .btn-small,
-#owindow-1>div.button-bar.modal-footer>a,
+#owindow-1 > div.button-bar.modal-footer > a,
 #edit-cancel-button,
 #edit-diff-button,
 #edit-preview-button,
 #edit-save-draft-button,
 #edit-save-continue-button,
 #edit-save-button,
-#owindow-1>div.content.modal-body>div>a.btn.btn-default,
+#owindow-1 > div.content.modal-body > div > a.btn.btn-default,
 a.collapsible-block-link {
     border: solid 1px #444444;
 }
@@ -2455,7 +2459,7 @@ table.page-files .highlight {
     --gray-bg: 66, 66, 72;
 }
 
-.anom-bar>.bottom-box {
+.anom-bar > .bottom-box {
     /*  horizontal bar  */
     box-shadow: 0 -0.5rem 0 0 rgb(207, 207, 207) !important;
     -webkit-box-shadow: 0 -0.5rem 0 0 rgb(207, 207, 207) !important;
@@ -2465,7 +2469,7 @@ table.page-files .highlight {
     -moz-box-shadow: 0 -0.5rem 0 0 rgb(var(--white-bar, 207, 207, 207)) !important;
 }
 
-.bottom-box>.diamond-part {
+.bottom-box > .diamond-part {
     /*  vertical bar  */
     box-shadow: -0.5rem 0 0 0 rgb(207, 207, 207) !important;
     -webkit-box-shadow: -0.5rem 0 0 0 rgb(207, 207, 207) !important;
@@ -2485,31 +2489,31 @@ table.page-files .highlight {
     border-left-color: rgb(var(--lg-bar, 118, 118, 130)) !important;
 }
 
-.danger-diamond>.arrows,
-.danger-diamond>.bottom-icon::before {
+.danger-diamond > .arrows,
+.danger-diamond > .bottom-icon::before {
     /*  inverted arrows, esoteric icons  */
     filter: invert(90%) !important;
     -webkit-filter: invert(90%) !important;
 }
 
-.danger-diamond>.quadrants>.bottom-quad,
-.anom-bar-container.explained .danger-diamond>.quadrants>.top-quad,
-.anom-bar-container.neutralized .danger-diamond>.quadrants>.top-quad,
-.anom-bar-container.pending .danger-diamond>.quadrants>.top-quad {
+.danger-diamond > .quadrants > .bottom-quad,
+.anom-bar-container.explained .danger-diamond > .quadrants > .top-quad,
+.anom-bar-container.neutralized .danger-diamond > .quadrants > .top-quad,
+.anom-bar-container.pending .danger-diamond > .quadrants > .top-quad {
     /*  "transparent" bottoms/top icon backgrounds  */
     background-color: rgb(26, 26, 26) !important;
     /*  body background color  */
 }
 
-.danger-diamond>.bottom-icon,
-.anom-bar-container.pending .danger-diamond>.top-icon::before {
+.danger-diamond > .bottom-icon,
+.anom-bar-container.pending .danger-diamond > .top-icon::before {
     /*  esoteric, pending icon backgrounds  */
     background-color: rgb(3, 3, 3) !important;
 }
 
-.acs-hybrid-text-bar>.acs-clear>.clearance-level-text::before,
-.acs-hybrid-text-bar>.acs-disrupt .disruption-class-number::before,
-.acs-hybrid-text-bar>.acs-risk .risk-class-number::before {
+.acs-hybrid-text-bar > .acs-clear > .clearance-level-text::before,
+.acs-hybrid-text-bar > .acs-disrupt .disruption-class-number::before,
+.acs-hybrid-text-bar > .acs-risk .risk-class-number::before {
     /*  hybrid text fixes  */
     color: rgb(237, 237, 237) !important;
     /*  text color  */
@@ -2582,13 +2586,13 @@ hr {
     color: black;
 }
 
-.raisa_memo>p:nth-child(1)::before,
-.classification_memo>p:nth-child(1)::before,
-.ettra_memo>p:nth-child(1)::before,
-.ethics_memo>p:nth-child(1)::before,
-.temporal_memo>p:nth-child(1)::before,
-.overwatch_memo>p:nth-child(1)::before,
-.miscomm_memo>p:nth-child(1)::before {
+.raisa_memo > p:nth-child(1)::before,
+.classification_memo > p:nth-child(1)::before,
+.ettra_memo > p:nth-child(1)::before,
+.ethics_memo > p:nth-child(1)::before,
+.temporal_memo > p:nth-child(1)::before,
+.overwatch_memo > p:nth-child(1)::before,
+.miscomm_memo > p:nth-child(1)::before {
     border-color: grey;
 }
 
