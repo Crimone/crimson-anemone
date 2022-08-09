@@ -1,3 +1,12 @@
+/* source: http://ah-sandbox.wikidot.com/component:collapsible-sidebar-x1 */
+
+@import url("components/collapsible-sidebar.css");
+
+@import url("https://scp-wiki.wdfiles.com/local--code/component:betterfootnotes/1");
+
+@import url('https://scp-wiki.wdfiles.com/local--code/component%3Aacs-animation/1');
+
+
 /*
 
     BASALT Theme
@@ -16,15 +25,12 @@
 
 */
 
-
-@import url('https://scp-wiki.wdfiles.com/local--code/component%3Aacs-animation/1');
-@import url("https://scp-wiki.wdfiles.com/local--code/component:betterfootnotes/1");
 @import url('https://scp-wiki-cn.wdfiles.com/local--code/theme%3Apaperstack/1');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&amp;display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&amp;display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap'); @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap');
 
 /* MAIN */
 
@@ -219,29 +225,29 @@ body {
 
 @keyframes translateTop {
     0% {
-     opacity: 1;
+        opacity: 1;
     }
     100% {
-     transform: translate(0px, -3px);
+        transform: translate(0px, -3px);
     }
 }
 
 @keyframes slideLeft {
     0% {
-     transform: translate(-200px, 0px);
-     opacity: 0;
+        transform: translate(-200px, 0px);
+        opacity: 0;
     }
     100% {
-     opacity: 1;
+        opacity: 1;
     }
 }
 
 @keyframes tilt {
     0% {
-     opacity: 1;
+        opacity: 1;
     }
     100% {
-     transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -487,25 +493,25 @@ yui-navset .yui-nav a:active {
 
 @keyframes tab-disappear {
     0% {
-     max-height: 9999rem;
+        max-height: 9999rem;
     }
     1% {
-     max-height: 100vh;
+        max-height: 100vh;
     }
     100% {
-     max-height: 0;
+        max-height: 0;
     }
 }
 
 @keyframes tab-appear {
     0% {
-     max-height: 0;
+        max-height: 0;
     }
     99% {
-     max-height: 100vh;
+        max-height: 100vh;
     }
     100% {
-     max-height: 9999rem;
+        max-height: 9999rem;
     }
 }
 
@@ -1249,7 +1255,7 @@ a.collapsible-block-link {
     color: #3f21ff !important;
 }
 
- .fnnum:hover::after {
+.fnnum:hover::after {
     color: white !important;
 }
 
@@ -1269,98 +1275,98 @@ a.collapsible-block-link {
 
 @media only screen and (max-width: 600px) {
     .scp-image-block.block-right {
-     float: none;
-     margin: 10px auto;
+        float: none;
+        margin: 10px auto;
     }
 }
 
 @media (min-width: 768px) {
     #header,
     #top-bar {
-     width: calc(100% - 4.4rem);
-     max-width: calc(100% - 4.4rem);
+        width: calc(100% - 4.4rem);
+        max-width: calc(100% - 4.4rem);
     }
     #main-content {
-     max-width: 95%;
+        max-width: 95%;
     }
 }
 
 @media (max-width: 1120px) {
     #top-bar {
-     font-weight: 600;
-     font-size: 80%;
+        font-weight: 600;
+        font-size: 80%;
     }
 }
 
 @media (max-width: 1020px) {
     #top-bar {
-     top: 3.2rem;
-     left: 7.8rem;
+        top: 3.2rem;
+        left: 7.8rem;
     }
     #extra-div-1::before {
-     top: 0.3rem;
+        top: 0.3rem;
     }
     #extra-div-2::before {
-     top: 1.9rem;
+        top: 1.9rem;
     }
     #u-header-link {
-     height: 2.5rem;
+        height: 2.5rem;
     }
     .document,
     .darkdocument {
-     width: 95%;
+        width: 95%;
     }
 }
 
 @media (max-width: 767px) {
     .mobile-top-bar {
-    display: flex;
-    justify-content: flex-start;
-    max-width: 100%;
-    width: 100%;
-    flex-direction: row;
+        display: flex;
+        justify-content: flex-start;
+        max-width: 100%;
+        width: 100%;
+        flex-direction: row;
     }
 }
 
 @media (max-width: 500px) {
     .logo {
-     display: none;
+        display: none;
     }
     #top-bar {
-     left: 3.6rem;
+        left: 3.6rem;
     }
     #extra-div-1::before,
     #extra-div-2::before {
-     left: 4.2rem;
+        left: 4.2rem;
     }
     #u-header-link {
-     left: 4rem;
+        left: 4rem;
     }
     .document, .darkdocument {
-    width: auto;
+        width: auto;
     }
 }
 
 @media (max-width: 560px) {
     #login-status span.printuser {
-     font-size: 0;
+        font-size: 0;
     }
 }
 
 @media (max-width: 430px) {
     #extra-div-1::before {
-     font-size: 23.45px;
-     top: 0.5rem;
+        font-size: 23.45px;
+        top: 0.5rem;
     }
     #extra-div-2::before {
-     font-size: 1em;
-     top: 2.1rem;
+        font-size: 1em;
+        top: 2.1rem;
     }
     #u-header-link {
-     width: 13.5rem;
+        width: 13.5rem;
     }
     #login-status {
-     right: 1.8rem;
+        right: 1.8rem;
     }
 }
 
@@ -1371,7 +1377,7 @@ a.collapsible-block-link {
 /* ======================= */
 
 .avatar-hover {
-display: none !important;
+    display: none !important;
 }
 
 ::selection {
@@ -1426,19 +1432,19 @@ div.buttons input, input.button, button, file, a.button {
 
 @media (max-width: 900px) {
     #who-rated-page-area>div {
-     column-count: 3;
+        column-count: 3;
     }
 }
 
 @media (max-width: 700px) {
     #who-rated-page-area>div {
-     column-count: 2;
+        column-count: 2;
     }
 }
 
 @media (max-width: 540px) {
     #who-rated-page-area>div {
-     column-count: 1;
+        column-count: 1;
     }
 }
 
@@ -1949,8 +1955,6 @@ tt {
     word-break: normal !important;
 }
 
-/* ---- DARK MODE ---- */
-
 :root {
     --barColour: #EDEDED !important;
     --linkColour: rgb(20, 20, 20) !important;
@@ -2133,12 +2137,12 @@ h6 {
 #site-tools-button::before,
 #tags-button::before,
 #pagerate-button::before {
-filter: invert(100%);
--webkit-filter: invert(100%);
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
 }
 
 #action-area > p:nth-child(5) > a  {
-border: solid 1px grey;
+    border: solid 1px grey;
 }
 
 #footer,
@@ -2701,234 +2705,4 @@ del,
 ins,
 .inline-diff ins {
     background-color: #1a4e14;
-}
-
-
-/* ---- RED MODE ---- */
-
-body {
-    background-color: #380004;
-    background-image: url("https://scp-wiki.wdfiles.com/local--files/component%3Aanomaly-class-bar/galactic.jpg");
-    background-attachment: fixed;
-    background-size: contain;
-    background-blend-mode: overlay;
-}
-
-body:before {
-  content: ' ';
-  position: fixed;
-  display: block;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to bottom, transparent, #0c0c0c 75%, #0c0c0c 75%, #0c0c0c 100%);
-}
-
-hr {
-background: transparent;
-border-top: double 3px #b10009;
-}
-
-.notation hr, .jotting hr, .darkdocument hr, .modal hr, .smallmodal hr, div.blockquote hr, .blockquote hr, blockquote hr {
-border-top: solid 2px grey;
-}
-
-#extra-div-1 {
-background: linear-gradient( 180deg, rgb(10, 10, 10) 0%, rgb(60, 0, 0) 100%);
-box-shadow: 0px 0px 8px 4px rgb(0 0 0);
-}
-
-#side-bar {
-    background: linear-gradient(
-0deg
- , rgba(10, 10, 10, 1) 87%, rgb(27 5 5) 100%);
-}
-
-a {
-    color: #ff3838;
-    font-weight: 600;
-}
-
-a.newpage {
-    color: #ff6b6b;
-    font-weight: 600;
-}
-
-a:visited {
-    color: #ff1414;
-    font-weight: 600;
-}
-
-#side-bar .side-block {
-    background: linear-gradient(
-180deg
-, rgba(10, 10, 10, 1) 0%, rgb(35, 0, 1) 100%);
-border: solid 2px rgb(35, 0, 1);
-}
-
-#side-bar .side-block.resources {
-    background: linear-gradient(
-180deg
-, rgba(10, 10, 10, 1) 0%, rgb(35, 0, 1) 100%) !important;
-border: solid 2px rgb(35, 0, 1);
-}
-
-#side-bar .side-block.media {
-    background-color: rgb(5 5 5) !important;
-    border-bottom: solid 2px rgb(10, 10, 10);
-    border-top: solid 2px rgb(10 10 10);
-}
-
-::selection {
-    background-color: rgba(255, 0, 0, 0.7);
-    color: white;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgb(35, 0, 1);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(45, 0, 1);
-}
-
-.bigtext {
-color: rgb(var(--five-color));
-}
-
-.scp-image-block img, .scp-image-block .scp-image-caption {
-    outline: solid 1px rgb(var(--five-color));
-}
-
-.footer-wikiwalk-nav a {
-    color: #ff8787;
-}
-
-
-
-/* source: http://ah-sandbox.wikidot.com/component:collapsible-sidebar-x1 */
-
-#top-bar .open-menu a {
-    position: fixed;
-    top: 0.5em;
-    left: 0.5em;
-    z-index: 5;
-    font-family: 'Nanum Gothic', san-serif;
-    font-size: 30px;
-    font-weight: 700;
-    width: 30px;
-    height: 30px;
-    line-height: 0.9em;
-    text-align: center;
-    border: 0.2em solid #888;
-    background-color: #fff;
-    border-radius: 3em;
-    color: #888;
-}
-
-@media (min-width: 768px) {
-
-#top-bar .mobile-top-bar {
-    display: block;
-}
-
-#top-bar .mobile-top-bar li {
-    display: none;
-}
-
-#main-content {
-    max-width: 708px;
-    margin: 0 auto;
-    padding: 0;
-    transition: max-width 0.2s ease-in-out;
-}
-
-#side-bar {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: -20em;
-    width: 17.75em;
-    height: 100%;
-    margin: 0;
-    overflow-y: auto;
-    z-index: 10;
-    padding: 1em 1em 0 1em;
-    background-color: rgba(0,0,0,0.1);
-    transition: left 0.4s ease-in-out;
-
-    scrollbar-width: thin;
-}
-
-#side-bar:target {
-    left: 0;
-}
-#side-bar:focus-within:not(:target) {
-    left: 0;
-}
-
-#side-bar:target .close-menu {
-    display: block;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    margin-left: 19.75em;
-    opacity: 0;
-    z-index: -1;
-    visibility: visible;
-}
-#side-bar:not(:target) .close-menu { display: none; }
-
-#top-bar .open-menu a:hover {
-    text-decoration: none;
-}
-
-/* FIREFOX-SPECIFIC COMPATIBILITY METHOD */
-@supports (-moz-appearance:none) {
-#top-bar .open-menu a {
-    pointer-events: none;
-}
-#side-bar:not(:target) .close-menu {
-    display: block;
-    pointer-events: none;
-    user-select: none;
-}
-
-/* This pseudo-element is meant to overlay the regular sidebar button
-so the fixed positioning (top, left, right and/or bottom) has to match */
-
-#side-bar .close-menu::before {
-    content: "";
-    position: fixed;
-    z-index: 5;
-    display: block;
-
-    top: 0.5em;
-    left: 0.5em;
-
-    border: 0.2em solid transparent;
-    width: 30px;
-    height: 30px;
-    font-size: 30px;
-    line-height: 0.9em;
-
-    pointer-events: all;
-    cursor: pointer;
-}
-#side-bar:focus-within {
-    left: 0;
-}
-#side-bar:focus-within .close-menu::before {
-    pointer-events: none;
-}
-}
-}
-
-div#u-credit-view div.modalbox div:first-child {
-    background-image: linear-gradient(125deg,rgba(var(--modal-header-stripe),.75) 25%,transparent 25%,transparent 50%,rgba(var(--modal-header-stripe),.75) 50%,rgba(var(--modal-header-stripe),.75) 75%,transparent 75%,transparent 100%);
-    background-size: 3rem 4.35rem;
-    background-color: rgb(var(--modal-header-bg));
 }

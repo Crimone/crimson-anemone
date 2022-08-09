@@ -1,0 +1,26 @@
+[[html]]
+
+<body>
+    <div style="text-align:center">
+        <p><span id="url-pre" style="font-family:Consolas;font-size: 12.8px;color: #333;">输入要查询的典籍名称：</span>
+        <input type="text" id="url" name="url" size="25" ></p>
+        <p>
+            <button onclick="Go1()">查看子页面</button>
+        </p>
+    </div>
+</body>
+
+<script language="javascript">
+
+    var keyWord;
+
+function Go1(){
+keyWord=document.getElementById("url").value;
+if (keyWord != "") {
+  var result='http://scp-wiki-cn.wikidot.com/mercuresphere/tags/' + "%2b" + keyWord + '/#search';
+  window.open(result);
+}
+}
+</script>
+
+[[/html]]
