@@ -14,26 +14,43 @@
 /* ----BEGIN---- */
 
 :root {
+    /* Header */
+    --logo-image: url("https://wanderers-library.wikidot.com/local--files/component:dustjacket-theme/wl_logo.png");
+    --header-title: "THE PARADIGM YOU HAVE SEARCHED FOR IS NOT IN SERVICE";
+    --header-subtitle: " ";
     --body-font: adelle-sans, 'Lato', '微软雅黑', sans-serif;
     --header-font: "Anonymous Pro", 'zuijinregular', 'Poppins', sans-serif;
     --title-font: "EB Garamond", 'HanWang WeiBeiMedium-Gb5', 'kaiti', 'Noto Serif SC', Big Caslon, Book Antiqua, Palatino Linotype, 'Noto Serif SC', Georgia, serif;
-    --mono-font: Recursive, adaptive-mono, "PT Mono", "Andale Mono", "Courier New", NSimSun, Courier, monospace;
-    --white-monochrome: 252, 252, 252;
-    --pale-gray-monochrome: 214, 245, 255;
-    --light-pale-gray-monochrome: 215, 255, 255;
-    --very-light-gray-monochrome: 220, 222, 230;
-    --light-gray-monochrome: 70, 130, 183;
-    --gray-monochrome: 0, 35, 100;
-    --dark-gray-monochrome: 10, 30, 55;
-    --gradient-header: url("https://tva1.sinaimg.cn/large/006Vtzrtly1h47w6r3x29j33uw06oahw.jpg");
+    --mono-font: Recursive, adaptive-mono, "PT Mono", "Andale Mono", "Courier New", '仿宋', 'Noto Serif SC', Courier, monospace;
+
+    --gradient-header: url("https://wanderers-library.wdfiles.com/local--files/component%3Atheme/wl-headerbg.png");
     --header-background-image-size: auto var(--header-height-on-desktop);
     --logo-image: none;
-    --pale-accent: 136, 198, 201;
-    --bright-accent: 163, 233, 224;
-    --medium-accent: 41, 127, 128;
-    --dark-accent: 10, 30, 55;
-    --newpage-color: 41, 128, 92;
-    --dark-medium-accent: 3, 105, 105;
+
+    --white-monochrome: 252, 252, 252;
+    --pale-gray-monochrome: 173, 193, 177;
+    --light-pale-gray-monochrome: 255, 250, 215;
+    /* v light green for blockquotes and stuff */
+    --very-light-gray-monochrome: 220, 230, 220;
+    --light-gray-monochrome: 130, 160, 135;
+    /* light accent green for login status */
+    --gray-monochrome: 45, 70, 45;
+    /* green */
+    --dark-gray-monochrome: 30, 55, 30;
+    /* dark green gray for sidebar background */
+    --black-monochrome: 12, 12, 12;
+    /* black */
+    --bright-accent: 255, 219, 90;
+    /* bright yellow */
+    --medium-accent: 228, 180, 28;
+    /* medium yellow */
+    --dark-accent: var(--dark-gray-monochrome);
+    /* dark yellow */
+    --alt-accent: 221, 102, 17;
+
+    --newpage-color: var(--alt-accent);
+    --dark-medium-accent: var(--medium-accent);
+
     --header-height-on-desktop: 10rem;
     --header-height-on-mobile: 7.5rem;
     --topbar-height-on-desktop: 1.625rem;
@@ -190,7 +207,7 @@ div#header {
     border-right: solid 1px rgba(64, 64, 64, .1);
     text-decoration: none;
     padding-top: calc((var(--topbar-height-on-desktop) - 2px) / 2 + 1px);
-    padding-bottom: calc((var(--topbar-height-on-desktop) - 2px) / 2 - 1px);
+    padding-bottom: calc((var(--topbar-height-on-desktop) - 2px) / 2);
     line-height: 2px;
     max-height: 2px;
     overflow: hidden;
@@ -205,11 +222,10 @@ div#header {
 }
 
 #top-bar ul li.sfhover ul li a, #top-bar ul li:hover ul li a {
-    background: rgb(var(--pale-gray-monochrome));
-    border-top: 1px solid rgb(var(--medium-accent));
-    padding: 0.3em 0.3em 0.3em 0.5em;
-    color: rgb(var(--dark-gray-monochrome));
-    font-family: var(--body-font);
+    background: rgb(var(--gray-monochrome));
+    border-top: 1px solid rgb(var(--bright-accent));
+    padding: 0.2em 1em 0.2em 1em;
+    color: rgb(var(--bright-accent));
     font-size: 0.7rem;
 }
 
@@ -392,7 +408,7 @@ div#header-extra-div-1 {
 
 #header h1 a::before {
     display: flex;
-    content: "THE PARADIGM YOU HAVE SEARCHED FOR IS NOT IN SERVICE";
+    content: var(--header-title);
     color: rgb(1, 245, 230);
     text-shadow: rgba(var(--dark-gray-monochrome), 0.5) 0.125rem 0 0, rgba(var(--gray-monochrome), 0.5) 0.0675rem 0.1052rem 0, rgba(var(--gray-monochrome), 0.5) -0.052rem 0.1137rem 0, rgba(var(--dark-gray-monochrome), 0.5) -0.1237rem 0.0176rem 0, rgba(var(--dark-gray-monochrome), 0.5) -0.0817rem -0.0946rem 0, rgba(var(--dark-gray-monochrome), 0.5) 0.0355rem -0.1199rem 0, rgba(var(--dark-gray-monochrome), 0.5) 0.12rem -0.0349rem 0;
 }
@@ -489,10 +505,91 @@ h2, h3, h4, h5, h6 {
     letter-spacing: .063rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .meta-title, #page-title {
-        font-size: 180%;
+        font-size: 1.5em;
     }
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0 0 .5em;
+    padding: 0;
+    font-weight: revert;
+    line-height: 1.4;
+    font-family: var(--title-font);
+    font-variant-ligatures: common-ligatures contextual discretionary-ligatures
+}
+
+h1,h2 {
+    --wght: 800
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: var(--wght)
+}
+
+h3,h4,h5,h6 {
+    --wght: 700
+}
+
+h1 {
+    font-size: 1.5em
+}
+
+h2 {
+    font-size: 1.25em
+}
+
+h3 {
+    font-size: 1.1875em
+}
+
+h4 {
+    font-size: 1.125em
+}
+
+h5 {
+    font-size: 1.0625em
+}
+
+h6 {
+    font-size: 1em
+}
+
+@media only screen and (min-width: 56.25rem) {
+    h1 {
+        font-size:2em
+    }
+
+    h2 {
+        font-size: 1.75em
+    }
+
+    h3 {
+        font-size: 1.5375em
+    }
+
+    h4 {
+        font-size: 1.3625em
+    }
+
+    h5 {
+        font-size: 1.15em
+    }
+
+    h6 {
+        font-size: 1em
+    }
+}
+
+#u-credit-view h2 {
+    font-size: 1.5em;
+    margin: .5em 0 .4em;
+}
+
+div#owindow-1.owindow .content.modal-body h1 {
+    margin: .7em 0 .6em;
+    font-family: 'zuijinregular', serif;
 }
 
 /* ===侧栏=== */
@@ -640,7 +737,7 @@ h2, h3, h4, h5, h6 {
         overflow-y: auto;
         z-index: 10;
         padding: 1em 1em 0 1em;
-        background-color: rgb(149, 171, 178);
+        background-color: rgb(124, 147, 126);
         transition: left 0.4s ease-in-out;
         scrollbar-width: thin;
     }
@@ -805,13 +902,87 @@ li, p {
 }
 
 /* FOOTER */
+
+
+
 #footer {
+    box-sizing: border-box;
+    display: flex!important;
+    grid-area: footer;
+    flex-wrap: wrap;
+    padding: .5em 0 0;
     background: rgb(var(--dark-accent));
-    color: rgb(var(--dark-gray-monochrome));
+    color: rgb(var(--bright-accent));
+    font-size: .75em;
+    line-height: 1;
+    white-space: nowrap
 }
 
-#footer a {
-    color: rgb(var(--dark-gray-monochrome));
+#footer,#footer .options {
+    align-items: center;
+    justify-content: center
+}
+
+#footer .options {
+    display: grid!important;
+    grid-template-columns: repeat(9,-webkit-min-content);
+    grid-template-columns: repeat(9,min-content);
+    padding: 0 1.5em 0 0;
+    width: inherit;
+    float: inherit;
+    color: rgb(var(--bright-accent))
+}
+
+#footer .options,#footer .options * {
+    white-space: nowrap
+}
+
+#footer .options a,#footer .options a:visited {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 1em;
+}
+
+
+#footer a,#footer a:visited {
+    display: inline-flex;
+    z-index: 1;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: .2em;
+    padding: .2em;
+    overflow: hidden;
+    line-height: 1;
+    background: inherit;
+    color: inherit
+}
+
+#license-area {
+    box-sizing: border-box;
+    display: flex;
+    grid-area: license;
+    flex-wrap: wrap;
+    align-self: flex-end;
+    width: 100%;
+    padding: .7em;
+    background-color: rgb(var(--dark-accent));
+    color: rgb(var(--bright-accent));
+}
+
+#license-area,#license-area a,#license-area a:visited {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    line-height: 1
+}
+
+#license-area a,#license-area a:visited {
+    display: inline-flex;
+    z-index: 1;
+    color: rgb(var(--bright-accent));
 }
 
 /* OTHER STRUCTURAL ELEMENTS */
@@ -1085,6 +1256,7 @@ span:not([class]):not([style]) > sup.footnoteref > a.footnoteref:before {
 
 .footnotes-footer .footnote-footer {
     margin: .25em 0 0 6ch;
+    line-height: 1.5;
 }
 
 .bibitems .bibitem {
