@@ -1,0 +1,523 @@
+/* Cobalt Aero Glass Theme */
+/* 2022 Wikidot Theme */
+/* By Mercuresphere */
+/* Based on Basalt Theme by Liryn & Placeholder McD  */
+/* CC BY-SA 3.0 */
+
+:root {
+    --white-monochrome: 252, 252, 252;
+    --pale-gray-monochrome: 214, 245, 255;
+    --light-pale-gray-monochrome: 215, 255, 255;
+    --very-light-gray-monochrome: 220, 222, 230;
+    --light-gray-monochrome: 70, 130, 183;
+    --gray-monochrome: 0, 35, 100;
+    --dark-gray-monochrome: 10, 30, 55;
+    --pale-accent: 136, 198, 201;
+    --bright-accent: 140,234,222;
+    --medium-accent: 41, 127, 128;
+    --dark-accent: 10, 30, 55;
+    --newpage-color: 41, 128, 92;
+    --dark-medium-accent: 3, 105, 105;
+ 
+    --logo: url(https://fastly.jsdelivr.net/gh/Crimone/crimson-anemone@main/files/evernight-white-6.svg);
+    --title: " 范式转移";
+    --subtitle: " 在钴玻璃与涂鸦墙壁之地";
+}
+ 
+body {
+    background: url(https://tva1.sinaimg.cn/large/006Vtzrtly1h5lkt0p9cyj33j81fmhdu.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-blend-mode: luminosity;
+    background-attachment: fixed;
+    background-size: cover;
+}
+ 
+#main-content::before {
+    content: " ";
+    border: 1px solid rgb(230,230,230);
+    border-radius: 10px;
+    position: absolute;
+    width: 106%;
+    height: calc(100% + 2rem);
+    background: rgba(var(--gray-monochrome),0.25);
+    backdrop-filter: blur(7px);
+    display: block;
+    z-index: -6;
+    left: calc(-3% - 1px);
+    box-shadow: 0px 0px 8px 4px rgba(var(--dark-gray-monochrome), 0.8);
+    top: -1rem;
+}
+ 
+@media only screen and (min-width: 768px) {
+    #main-content::before {
+        width: calc(100vw - 20px);
+        height: 100%;
+        top: 1rem;
+        left: calc((100vw - 20px - 100%) / (-2) - 1px);
+    }
+}
+ 
+@media only screen and (min-width: 975px) {
+    #main-content::before {
+        width: 110%;
+        left: calc(-5% - 1px);
+        top: 1rem;
+    }
+}
+ 
+#extra-div-1 {
+    background: linear-gradient( 180deg, rgba(var(--dark-gray-monochrome) ,0.5) 0%, rgba(var(--gray-monochrome),0.5) 100%);
+    backdrop-filter: blur(7px);
+    box-shadow: 0px 1px rgb(230,230,230),inset 0px 1px rgb(230,230,230), 0px 0px 8px 2px rgba(0, 0, 0, 0.8);
+}
+ 
+blockquote, div.blockquote {
+    background: rgba(var(--very-light-gray-monochrome),0.25);
+    border: 1px solid rgb(230,230,230);
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 0px 8px 2px rgba(var(--dark-gray-monochrome), 0.8);
+}
+ 
+hr {
+    height: 1px;
+    border: 0;
+    background-color: rgb(230,230,230);
+    box-shadow: 0px 0px 8px 2px rgba(var(--dark-gray-monochrome), 0.8);
+    background-image: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 1em 0;
+}
+ 
+div#u-credit-view hr {
+    margin: 1em 2em;
+}
+ 
+.fancyhr hr {
+    filter: saturate(0);
+    border-top: 2vw solid transparent;
+    height: 0;
+    box-sizing: border-box;
+    border-image-source: url(https://wanderers-library.wdfiles.com/local--files/component%3Adustjacket-theme/wl_hr.png);
+    border-image-repeat: round round;
+    background: rgba(var(--bright-accent), 0) none;
+    border-image-slice: 80 500 80 500 fill;
+    border-image-width: 10em 80em 10em 80em;
+    box-shadow:none;
+}
+ 
+.fancyborder {
+    filter: saturate(0);
+    box-sizing: border-box;
+    padding: 2vw;
+    border: 2vw solid rgba(0, 0, 0, 0.5);
+    border-image: url("https://wanderers-library.wdfiles.com/local--files/component%3Adustjacket-theme/wl_border.png") 600 round;
+    border-image-width: 6;
+    line-height: 1.5;
+}
+ 
+.scp-image-block img, .scp-image-block .scp-image-caption {
+    outline: solid 1px rgb(230,230,230);
+    box-shadow: 0px 0px 8px 2px rgba(var(--dark-gray-monochrome) , 0.7);
+    background: rgba(var(--very-light-gray-monochrome),0.5);
+    margin-top: 10px;
+}
+ 
+.scp-image-block img {
+    background: transparent;
+}
+ 
+#extra-div-1 {
+    top: 1px;
+}
+ 
+.yui-navset .yui-content {
+    background: transparent;
+    box-shadow: none;
+    border-bottom: dotted 4px rgb(230,230,230);
+}
+ 
+.yui-navset .yui-nav, .yui-navset .yui-navset-top .yui-nav {
+    border: 1px solid rgb(230,230,230);
+    box-shadow: 0px 0px 8px 4px rgb(0 0 0 / 70%);
+}
+ 
+.yui-navset .yui-nav .selected, .yui-navset .yui-navset-top .yui-nav .selected, .yui-navset .yui-nav a:hover, yui-navset .yui-nav a:active {
+    background: rgba(var(--very-light-gray-monochrome),0.5);
+}
+ 
+.yui-navset .yui-nav a, .yui-navset .yui-navset-top .yui-nav a {
+    background: rgba(var(--pale-gray-monochrome),0.25);
+    border-radius: 10px;
+}
+ 
+.yui-navset .yui-nav li, .yui-navset .yui-navset-top .yui-nav li {
+    background: none;
+    border-radius: 10px;
+}
+ 
+.yui-navset .yui-nav .selected a:focus, .yui-navset .yui-nav .selected a:active {
+    background-color: rgba(var(--very-light-gray-monochrome),0.5);
+}
+ 
+.yui-navset .yui-nav, .yui-navset .yui-navset-top .yui-nav {
+    box-shadow: 0px 0px 8px 2px rgb(0 0 0 / 70%);
+    border-radius: 10px;
+}
+ 
+#side-bar {
+    background: linear-gradient( 0deg, rgba(var(--dark-gray-monochrome),0.85) 87%, rgba(var(--dark-gray-monochrome)) 100%);
+}
+ 
+#side-bar .side-block {
+    background: linear-gradient(180deg, rgba(10, 10, 10, 1) 0%, rgb(var(--gray-monochrome)) 100%);
+    border: solid 2px rgb(var(--gray-monochrome));
+}
+ 
+#side-bar .side-block.resources {
+    background: linear-gradient(180deg, rgba(10, 10, 10, 1) 0%, rgb(var(--gray-monochrome)) 100%) !important;
+    border: solid 2px rgb(var(--gray-monochrome));
+}
+ 
+#side-bar .side-block.media {
+    background-color: rgb(5 5 5) !important;
+    border-bottom: solid 2px rgb(10, 10, 10);
+    border-top: solid 2px rgb(10 10 10);
+}
+ 
+@media (max-width: 767px) {
+    #page-content > hr, #page-content > .list-pages-box > .list-pages-item > hr {
+        margin: 1em 0; 
+    }
+}
+ 
+#page-content .rate-box-with-credit-button {
+    border: 1px solid rgb(230,230,230);
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 2px rgba(var(--dark-gray-monochrome), 0.8);
+}
+ 
+#page-content .rate-box-with-credit-button {
+    background: linear-gradient(to top, rgba(var(--very-light-gray-monochrome), 0.25) 0, rgba(var(--very-light-gray-monochrome), 0.15) 100%) !important;
+}
+ 
+#page-content .page-rate-widget-box .rate-points {
+    background-color: transparent !important;
+    color: #F5F5F5 !important;
+    border: none;
+}
+ 
+.page-rate-widget-box .rateup, .page-rate-widget-box .ratedown, .page-rate-widget-box .cancel {
+    background: transparent !important;
+}
+ 
+#page-content .page-rate-widget-box {
+    box-shadow: none;
+}
+ 
+#action-area .page-rate-widget-box .rate-points {
+    background-color: transparent !important;
+    color: #F5F5F5 !important;
+    border: none;
+}
+ 
+#action-area .page-rate-widget-box {
+    box-shadow: 0px 0px 8px 2px rgba(var(--dark-gray-monochrome), 0.8);
+    border: 1px solid rgb(230,230,230);
+    border-radius: 5px;
+}
+ 
+#page-content .rate-box-with-credit-button .fa-info:hover {
+    background: transparent;
+    color: #ffffff;
+}
+ 
+.footnotes-footer {
+    border-left: solid 3px rgb(230,230,230);
+}
+ 
+.footnotes-footer a {
+    color: rgb(230,230,230);
+}
+ 
+::-moz-selection {
+    color: inherit;
+    background: rgba(var(--bright-accent),.25);
+    text-shadow: none
+}
+ 
+::selection {
+    color: inherit;
+    background: rgba(var(--bright-accent),.25);
+    text-shadow: none
+}
+ 
+a {
+    color: rgb(var(--bright-accent));
+}
+ 
+a, a:visited {
+    -webkit-text-decoration: underline .09375em;
+    -webkit-text-decoration-color: transparent;
+    text-decoration: underline .09375em;
+    text-decoration-color: transparent;
+    transition: text-decoration-color .15s cubic-bezier(.4, 0, .2, 1), color .15s cubic-bezier(.4, 0, .2, 1), -webkit-text-decoration-color .15s cubic-bezier(.4, 0, .2, 1);
+}
+ 
+a:visited {
+    color: rgb(var(--bright-accent));
+}
+ 
+a, a.newpage {
+    background: transparent;
+}
+ 
+a.newpage {
+    color: rgb(var(--newpage-color));
+}
+ 
+a:active, a:hover, a:focus-within {
+    -webkit-text-decoration: underline .09375em;
+    -webkit-text-decoration-color: currentColor;
+    background-color: initial;
+    color: rgb(var(--pale-accent));
+    text-decoration: underline .09375em;
+    text-decoration-color: initial;
+    transition: text-decoration-color .15s cubic-bezier(.4, 0, .2, 1), color .15s cubic-bezier(.4, 0, .2, 1), -webkit-text-decoration-color .15s cubic-bezier(.4, 0, .2, 1);
+}
+ 
+#main-content .page-tags a {
+    background: rgba(var(--very-light-gray-monochrome),0.25);
+    border: 1px solid rgb(230,230,230);
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 0px 8px 2px rgba(var(--dark-gray-monochrome), 0.8);
+}
+ 
+#main-content a.collapsible-block-link {
+    background: rgba(var(--very-light-gray-monochrome),0.25);
+    border: 1px solid rgb(230,230,230);
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 0px 8px 2px rgba(var(--dark-gray-monochrome), 0.8);
+    border-radius: 5px;
+}
+
+.modalbox {
+    background: rgba(var(--very-light-gray-monochrome),0.25) !important;
+    border: 1px solid rgb(230,230,230) !important;
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 0px 8px 2px rgba(var(--dark-gray-monochrome), 0.8) !important;
+    border-radius: 10px !important;
+}
+
+#search-top-box-form > input[type=submit], #search-top-box-form > input[type=submit]:hover, #search-top-box-form > input[type=submit]:focus, #search-top-box-form > input[type=submit]:target {
+    margin-top: 0;
+}
+
+div#search-top-box {
+    top: 14px;
+}
+
+ 
+#extra-div-1::before {
+    top: 0.7rem;
+}
+ 
+#extra-div-2::before {
+    top: 2.8rem;
+}
+ 
+@media (max-width: 1020px) {
+    #extra-div-1::before {
+        top: 0.3rem;
+        font-size: calc(0.85 * 27.45px);
+    }
+}
+ 
+@media (max-width: 1020px) {
+    #extra-div-2::before {
+        top: 2rem;
+        font-size: calc(0.85 * 1.22em);
+    }
+}
+ 
+#breadcrumbs {
+    color: rgba(230,230,230,0.9);
+}
+
+@media (max-width: 767px) {
+    #side-bar:target {
+        border: none;
+        box-shadow: 3px 0 1px -2px rgb(0 0 0 / 4%), 1px 0 5px 0 rgb(0 0 0 / 20%), inset -1px 0px rgb(230 230 230);
+    }
+}
+
+#side-bar {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3), inset -1px 0px rgb(230 230 230);
+}
+
+
+.hovertip, #account-options {
+    background: rgba(var(--very-light-gray-monochrome),0.25) !important;
+    border: 1px solid rgb(230,230,230) !important;
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 0px 8px 2px rgba(var(--dark-gray-monochrome), 0.8) !important;
+    border-radius: 8px !important;
+}
+
+#top-bar ul li.sfhover a:hover, #top-bar ul li:hover a:hover {
+    background: rgba(var(--very-light-gray-monochrome),0.25);
+}
+
+#top-bar ul li.sfhover ul li a, #top-bar ul li:hover ul li a {
+    background-color: rgba(var(--very-light-gray-monochrome),0.25);
+}
+
+#top-bar li:hover ul, #top-bar li.sfhover ul {
+    background: rgba(var(--very-light-gray-monochrome),0.25) !important;
+    border: 1px solid rgb(230,230,230) !important;
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 0px 8px 2px rgba(var(--dark-gray-monochrome), 0.8) !important;
+    border-radius: 8px !important;
+}
+
+#top-bar ul li.sfhover ul li:first-of-type a, #top-bar ul li:hover ul li:first-of-type a {
+    border-top:0;
+}
+.close-credits {
+    filter: hue-rotate(177deg) saturate(0.4) brightness(4);
+}
+
+/* ===内置解决saving pages问题的模块=== */
+body[class="wait"] #odialog-shader-iframe, body[class="wait"] #odialog-shader {
+    display: none !important;
+}
+ 
+#odialog-container {
+    position: fixed !important;
+}
+ 
+body[class="wait"] #odialog-container {
+    z-index: -1;
+}
+ 
+body[class="wait"] #odialog-container #owindow-1 {
+    display: none !important;
+}
+ 
+body[class="wait"] a[name="page-top"][target] + div #main-content #action-area div#lock-info {
+    background-color: rgb(var(--dark-accent));
+    border: 1px solid rgb(var(--bright-accent));
+}
+ 
+div#lock-info {
+    font-size: 0 !important;
+    margin: .8rem 0 !important;
+    padding: 0.4rem .8rem !important;
+}
+ 
+div#lock-info::before {
+    content: '您握有一个独占的15 分钟锁定，这将会阻止其他人编辑您正在作业的页面。\A这个锁定将在闲置 ';
+    display: inline;
+    font-size: .82rem;
+    white-space: pre-wrap;
+}
+ 
+div#lock-info > strong {
+    font-size: .82rem;
+}
+ 
+div#lock-info > br {
+    display: none;
+}
+ 
+div#lock-info::after {
+    content: ' 秒后失效。';
+    display: inline;
+    font-size: .82rem;
+}
+ 
+body[class="wait"] a[name="page-top"][target] + div #main-content #action-area div#lock-info::before {
+    content: '保存页面中……\A若此提示已经显示了很长时间，建议将编辑框中的内容复制到剪切板然后刷新本页重新编辑。';
+    display: inline;
+    font-size: .82rem;
+    color: rgb(var(--bright-accent));
+    white-space: pre-wrap;
+}
+ 
+body[class="wait"] a[name="page-top"][target] + div #main-content #action-area div#lock-info::after {
+    font-size: 0;
+}
+ 
+body[class="wait"] a[name="page-top"][target] + div #main-content #action-area div#lock-info > strong {
+    font-size: 0;
+}
+ 
+body[class="wait"] a[name="page-top"][target] + div #main-content #action-area div#lock-info::after {
+    font-size: 0;
+}
+ 
+/* ===修复ios设备上的显示效果=== */
+@supports (-webkit-touch-callout: none) {
+    .fancyhr hr {
+        filter: hue-rotate(134deg) saturate(104.62%) brightness(0.5);
+        border-image-source: url("https://wanderers-library.wdfiles.com/local--files/component%3Adustjacket-theme/wl_hr.png");
+        border-image-repeat: repeat;
+        border-image-slice: 80 500 80 500 fill;
+        border-image-width: 10em 80em 10em 80em;
+    }
+}
+ 
+/* ----END---- */
+#owindow-1.owindow {
+    background: rgba(var(--very-light-gray-monochrome),0.15) !important;
+    border: 1px solid rgb(230,230,230) !important;
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 0px 8px 2px rgba(var(--dark-gray-monochrome), 0.8) !important;
+    border-radius: 10px !important;
+}
+
+#owindow-1 > div.title.modal-header {
+    background: transparent;
+}
+
+#owindow-1 > div.content.modal-body > div {
+    border-top: dotted 2px rgb(230,230,230);
+}
+
+a.btn.btn-danger, a.btn.btn-primary, .btn-small, #owindow-1 > div.button-bar.modal-footer > a, #edit-cancel-button, #edit-diff-button, #edit-preview-button, #edit-save-draft-button, #edit-save-continue-button, #edit-save-button, #owindow-1 > div.content.modal-body > div > a.btn.btn-default, a.collapsible-block-link {
+    background: rgba(var(--very-light-gray-monochrome),0.25) !important;
+    border: 1px solid rgb(230,230,230) !important;
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 0px 4px 2px rgba(var(--dark-gray-monochrome), 0.8) !important;
+    border-radius: 5px !important;
+}
+
+a.collapsible-block-link:hover, a.btn.btn-danger:hover, a.btn.btn-primary:hover, .btn-small:hover, #owindow-1 > div.button-bar.modal-footer > a:hover, #edit-cancel-button:hover, #edit-diff-button:hover, #edit-preview-button:hover, #edit-save-draft-button:hover, #edit-save-continue-button:hover, #edit-save-button:hover, #owindow-1 > div.content.modal-body > div > a.btn.btn-default:hover {
+    color: rgb(var(--pale-accent));
+}
+
+a.btn.btn-danger:not(.btn-small.btn-sm) {
+    margin-bottom: 4px !important;
+}
+
+#owindow-1 > div.content.modal-body td.active > b {
+    font-family: 'Work Sans', sans-serif;
+    color: rgb(200 200 200);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(var(--light-gray-monochrome));
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(var(--medium-accent));
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(var(--gray-monochrome),0.85);
+}
