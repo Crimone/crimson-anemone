@@ -2069,6 +2069,10 @@ form#edit-page-form .edit-help-34>a:focus-within {
     --swatch-text-secondary-color: var(--dark-accent);
 }
 
+table.page-history tr:nth-of-type(2) td:not(:nth-of-type(7)):before {
+    --swatch-text-secondary-color: var(--dark-accent);
+}
+
 /* ===兼容性修正=== */
 
 div.earthworm div.inner,
