@@ -1,0 +1,114 @@
+@media only screen and (max-width: 768px) {
+    #login-status {
+        right: unset;
+        font-size: unset;
+    }
+
+    #navi-bar,
+    #navi-bar-shadow,
+    #search-top-box-input {
+        display: unset;
+    }
+
+    #search-top-box-input {
+        min-width: unset;
+    }
+
+    #search-top-box {
+        top: unset;
+        right: unset;
+        transition: unset;
+        height: unset;
+    }
+
+    #search-top-box:focus-within {
+        box-shadow: unset;
+        background: unset;
+        padding: unset;
+    }
+
+    #search-top-box:not(:focus-within):before {
+        -webkit-mask-size: unset;
+        -webkit-mask-position: unset;
+        -webkit-mask-repeat: unset;
+        -webkit-mask-image: unset;
+        position: unset;
+        top: unset;
+        right: unset;
+        z-index: unset;
+        mask-image: unset;
+        mask-position: unset;
+        mask-size: unset;
+        mask-repeat: unset;
+        cursor: unset;
+        background-color: unset;
+        width: unset;
+        height: unset;
+        pointer-events: unset;
+        content: unset;
+        color: unset;
+        text-align: unset;
+    }
+
+    #search-top-box form[id=search-top-box-form] {
+        visibility: unset;
+        height: unset;
+    }
+
+    #search-top-box form[id=search-top-box-form]:focus-within {
+        visibility: unset;
+    }
+
+    #search-top-box form[id=search-top-box-form] input {
+        -webkit-appearance: unset;
+        -moz-appearance: unset;
+        position: unset;
+        top: unset;
+        transform: unset;
+        appearance: unset;
+        height: unset;
+    }
+
+    #search-top-box form[id=search-top-box-form] input[type=text] {
+        visibility: unset;
+        transition: unset;
+    }
+
+    #search-top-box form[id=search-top-box-form]:not(:focus-within) input[type=text] {
+        position: unset;
+        right: unset;
+        transform: unset;
+        cursor: unset;
+        border-width: unset;
+        width: unset;
+        height: unset;
+        color: unset;
+    }
+
+    #search-top-box form[id=search-top-box-form]:not(:focus-within) input[type=text]:hover {
+        background-color: unset;
+    }
+
+    #search-top-box form[id=search-top-box-form] input[type=submit] {
+        visibility: unset;
+        transition: unset;
+        background-image: unset;
+        background-position: unset;
+        background-size: unset;
+        background-repeat: unset;
+        background-color: unset;
+        width: unset;
+        color: unset;
+    }
+
+    #search-top-box form[id=search-top-box-form]:not(:focus-within) input[type=submit] {
+        opacity: unset;
+        margin: unset;
+        padding: unset;
+        width: unset;
+    }
+
+    #header h1 a {
+        z-index: unset;
+    }
+}

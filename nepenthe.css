@@ -1,0 +1,62 @@
+@keyframes conversion {
+    0% {
+        color: #000
+    }
+
+    8.67% {
+        color: #333;
+    }
+
+    16.33% {
+        color: #666;
+    }
+
+    24% {
+        color: #999;
+    }
+
+    32.67% {
+        color: #ccc;
+    }
+
+    40.33% {
+        color: #ddd;
+    }
+
+    48.67% {
+        color: #fff;
+    }
+
+    56.33% {
+        color: #fff;
+    }
+
+    64.67% {
+        color: #ddd;
+    }
+
+    72.67% {
+        color: #ccc;
+    }
+
+    80.33% {
+        color: #999;
+    }
+
+    88.33% {
+        color: #666;
+    }
+
+    95.67% {
+        color: #333;
+    }
+
+    100% {
+        color: #000
+    }
+}
+
+.transform {
+    animation: conversion 20s infinite linear;
+    ;
+}
