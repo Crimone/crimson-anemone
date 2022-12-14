@@ -28,15 +28,15 @@
 @import url('https://fastly.jsdelivr.net/gh/Crimone/crimson-anemone@2.3.14/black-highlighter.min.css');
 @import url("https://fastly.jsdelivr.net/gh/Crimone/wanderers-dustjacket-fonts@4.3.8/typefaces.css");
 @import url("https://fastly.jsdelivr.net/gh/Crimone/wanderers-dustjacket-fonts@4.3.8/fonts.css");
-@import url("https://fastly.jsdelivr.net/gh/Crimone/typefaces@main/whz/whz.css");
+@import url("https://crimone.github.io/typefaces/whz/whz.css");
 
 /*  中文调整
 ==============================================================================*/
 :root:lang(cn) {
     --header-title: "被放逐者之图书馆";
     --body-font: Texturina, Optima, Segoe, Segoe UI, Candara, Calibri, Arial, 'Noto Sans SC', sans-serif;
-    --header-font: zuijinregular, 'HanWang WeiBeiMedium-Gb5', 'kaiti', 'Noto Serif SC', Big Caslon, Book Antiqua, Palatino Linotype, Georgia, serif;
-    --title-font: "EB Garamond", 'HanWang WeiBeiMedium-Gb5', 'kaiti', 'lisu', 'Noto Serif SC', Big Caslon, Book Antiqua, Palatino Linotype, 'Noto Serif SC', Georgia, serif;
+    --header-font: zuijinregular, 'punctuation-marks-altered', 'HanWang WeiBeiMedium-Gb5', 'kaiti', 'Noto Serif SC', Big Caslon, Book Antiqua, Palatino Linotype, Georgia, serif;
+    --title-font: "EB Garamond", 'punctuation-marks-altered', 'HanWang WeiBeiMedium-Gb5', 'kaiti', 'lisu', 'Noto Serif SC', Big Caslon, Book Antiqua, Palatino Linotype, 'Noto Serif SC', Georgia, serif;
     --UI-font: "EB Garamond", Big Caslon, Book Antiqua, Palatino Linotype, 'Noto Serif SC', Georgia, serif;
     --mono-font: Recursive, Consolas, monaco, '仿宋', 'Noto Serif SC', monospace;
 }
