@@ -1,41 +1,41 @@
 @namespace "http://www.w3.org/1999/xhtml";@namespace svg "http://www.w3.org/2000/svg";.cats_applications {
-    background: url(images/apps.png) no-repeat 50%;
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/apps.png) no-repeat 50%;
     height: 28px;
     width: 28px
 }
 
 .cats_audiobooks {
-    background: url(images/audiobook.png) no-repeat 50%;
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/audiobook.png) no-repeat 50%;
     height: 28px;
     width: 28px
 }
 
 .cats_comedy {
-    background: url(images/comedy.png) no-repeat 50%;
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/comedy.png) no-repeat 50%;
     height: 28px;
     width: 28px
 }
 
 .cats_comics {
-    background: url(images/comics.png) no-repeat 50%;
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/comics.png) no-repeat 50%;
     height: 28px;
     width: 28px
 }
 
 .cats_ebooks {
-    background: url(images/ebook.png) no-repeat 50%;
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/ebook.png) no-repeat 50%;
     height: 28px;
     width: 28px
 }
 
 .cats_elearningvideos {
-    background: url(images/elearning.png) no-repeat 50%;
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/elearning.png) no-repeat 50%;
     height: 28px;
     width: 28px
 }
 
 .cats_music {
-    background: url(images/music.png) no-repeat 50%;
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/music.png) no-repeat 50%;
     height: 28px;
     width: 28px
 }
@@ -214,7 +214,7 @@ ul.thin li {
 }
 
 #logo {
-    background: url(images/logo.png) no-repeat 0 0;
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/logo.png) no-repeat 0 0;
     margin: 5px auto
 }
 
@@ -606,13 +606,13 @@ ul.poll li.graph {
 }
 
 .show_torrents {
-    background: url(images/show.png) no-repeat 50%;
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/show.png) no-repeat 50%;
     height: 28px;
     width: 28px
 }
 
 .hide_torrents {
-    background: url(images/hide.png) no-repeat 50%;
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/hide.png) no-repeat 50%;
     height: 28px;
     width: 28px
 }
@@ -685,7 +685,7 @@ ul.poll li.graph {
 }
 
 .last_read {
-    background: url(images/go_last_read.png) no-repeat 50%;
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/go_last_read.png) no-repeat 50%;
     height: 15px;
     margin-left: 5px;
     width: 15px
@@ -703,35 +703,35 @@ ul.poll li.graph {
 }
 
 .unread_locked_sticky {
-    background: url(images/locked_sticky_unread.png) no-repeat 50%
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/locked_sticky_unread.png) no-repeat 50%
 }
 
 .read_locked_sticky {
-    background: url(images/locked_sticky_read.png) no-repeat 50%
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/locked_sticky_read.png) no-repeat 50%
 }
 
 .read_sticky {
-    background: url(images/sticky_read.png) no-repeat 50%
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/sticky_read.png) no-repeat 50%
 }
 
 .unread_sticky {
-    background: url(images/sticky_unread.png) no-repeat 50%
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/sticky_unread.png) no-repeat 50%
 }
 
 .unread_locked {
-    background: url(images/locked_unread.png) no-repeat 50%
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/locked_unread.png) no-repeat 50%
 }
 
 .read_locked {
-    background: url(images/locked_read.png) no-repeat 50%
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/locked_read.png) no-repeat 50%
 }
 
 .unread {
-    background: url(images/unread.png) no-repeat 50%
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/unread.png) no-repeat 50%
 }
 
 .read {
-    background: url(images/read.png) no-repeat 50%
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/read.png) no-repeat 50%
 }
 
 strong.quoteheader {
@@ -818,7 +818,7 @@ ul .invitetree {
 }
 
 .left_poll {
-    background: url(images/bar_left.gif) no-repeat 50%;
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/bar_left.gif) no-repeat 50%;
     width: 2px
 }
 
@@ -830,7 +830,7 @@ ul .invitetree {
 }
 
 .center_poll {
-    background: url(images/bar.gif) repeat;
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/bar.gif) repeat;
     max-width: 785px
 }
 
@@ -839,7 +839,7 @@ ul .invitetree {
 }
 
 .right_poll {
-    background: url(images/bar_right.gif) no-repeat 50%;
+    background: url(https://edge.opsfet.ch/styles/xanax_cake/images/bar_right.gif) no-repeat 50%;
     float: left;
     height: 9px;
     margin: 0;
